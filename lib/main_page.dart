@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/components/nav_menubutton.dart';
 import 'section_card.dart';
 
 class MainPage extends StatefulWidget {
@@ -12,17 +13,23 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Yuki.L'),
-      ),
-      body:const Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            child: SectionCard(),
-          ),
-        ],
-      )
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            Row(
+              children: [
+                NavMenuButton(onPress: (){ Navigator.pushNamed(context, '/home');}, menuText: 'Home'),
+
+                  ],),
+              ],
+            ),
+        body: const Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              child: SectionCard(),
+            ),
+          ],
+        ));
   }
 }
