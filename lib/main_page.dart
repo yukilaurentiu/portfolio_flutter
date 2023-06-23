@@ -54,14 +54,14 @@ class _MainPageState extends State<MainPage> {
             ),
           ],
         ),
-        body: Column(
+        body: const Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Row(
               children: [
                 SizedBox(width: 20.0),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(20.0),
                   child: Image(
                     image: AssetImage('images/user_kitty.jpg'),
                   ),
@@ -81,6 +81,9 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ],
+            ),
+            Row(
+
             ),
           ],
         ));
