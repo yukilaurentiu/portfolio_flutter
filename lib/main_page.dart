@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/nav_menubutton.dart';
+import 'package:portfolio_flutter/navbar.dart';
+
 
 
 class MainPage extends StatefulWidget {
@@ -13,47 +14,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          actions: <Widget>[
-            Row(
-              children: [
-                NavMenuButton(
-                    onPress: () {
-                      Navigator.pushNamed(context, '/home');
-                    },
-                    menuText: 'Home'),
-                SizedBox(
-                  width: 10.0,
-                ),
-                NavMenuButton(
-                    onPress: () {
-                      Navigator.pushNamed(context, '/home');
-                    },
-                    menuText: 'About'),
-                SizedBox(
-                  width: 10.0,
-                ),
-                NavMenuButton(
-                    onPress: () {
-                      Navigator.pushNamed(context, '/home');
-                    },
-                    menuText: 'Project'),
-                SizedBox(
-                  width: 10.0,
-                ),
-                NavMenuButton(
-                    onPress: () {
-                      Navigator.pushNamed(context, '/home');
-                    },
-                    menuText: 'Contact'),
-                SizedBox(
-                  width: 10.0,
-                ),
-              ],
-            ),
-          ],
-        ),
+        appBar: navBar(context),
         body: const Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
