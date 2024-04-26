@@ -23,5 +23,10 @@ ThemeData myTheme() {
     height: 1.1,
     )));}
 
+final burgerMenuTextStyle = TextStyle(
+  fontSize: 24.0,
+  fontWeight: FontWeight.w300,
+);
 
 const navMenuColor = Colors.teal;
+
