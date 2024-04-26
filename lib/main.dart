@@ -10,10 +10,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light(
-          // .copyWith(
-        // colorScheme: ThemeData().colorScheme.copyWith(
-        //   primary: Colors.white,
-        // ),
       ),
       initialRoute: '/home',
       routes: {
