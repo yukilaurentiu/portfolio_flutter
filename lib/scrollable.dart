@@ -25,7 +25,7 @@ class _scrollableState extends State<scrollable> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100.0),
         child: AppBar(
-          title: Text('Lanrentiu Yukiko'),
+          title: Text('Lanrentiu Yukiko',style: Theme.of(context).textTheme.titleMedium,),
           backgroundColor: lightGreen,
           iconTheme: IconThemeData(size: 44),
           elevation: 0,

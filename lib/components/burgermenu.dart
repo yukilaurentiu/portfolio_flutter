@@ -19,7 +19,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
         ),
         ListTile(
           title: Text(
-            'Home',
+            'home',
             style: burgerMenuTextStyle,
           ),
           onTap: () {
@@ -30,7 +30,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
         ),
         ListTile(
           title: Text(
-            'My work',
+            'my project',
             style: burgerMenuTextStyle,
           ),
           onTap: () {
@@ -41,29 +41,24 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
         ),
         ListTile(
           title: Text(
-              'Technologies', style: burgerMenuTextStyle),
+              'my skills', style: burgerMenuTextStyle),
           onTap: () {
             pages(2);
           },
         ),
         ListTile(
           title: Text(
-              'About me', style: burgerMenuTextStyle),
+              'CV', style: burgerMenuTextStyle),
           onTap: () {
             pages(3);
           },
         ),
         ListTile(
           title: Text(
-              'Contact me', style: burgerMenuTextStyle),
+              'contact me', style: burgerMenuTextStyle),
           onTap: () {
             pageNav.jumpToPage(1);
           },
-        ),
-        ListTile(
-          title: Text(
-              'Imprint', style: burgerMenuTextStyle),
-          onTap: () {},
         ),
 ], )
   );
