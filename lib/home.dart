@@ -6,7 +6,9 @@ import 'components/projects_card.dart';
 import 'footer.dart';
 
 class Home extends StatefulWidget {
-  const Home({super.key});
+  const Home(this.pageNav, {super.key});
+  final PageController pageNav;
+
 
   @override
   State<Home> createState() => _HomeState();
@@ -30,7 +32,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: navBar(context),
       body: Container(
     decoration: const BoxDecoration(
     image: DecorationImage(
