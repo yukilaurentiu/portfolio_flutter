@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/theme.dart';
+import 'package:portfolio_flutter/theme.dart';
 
 import 'components/burgermenu.dart';
 import 'home.dart';

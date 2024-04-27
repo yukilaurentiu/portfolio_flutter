@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/theme.dart';
+import 'package:portfolio_flutter/theme.dart';
 import 'package:portfolio_flutter/scrollable.dart';
 import 'home.dart';
 
