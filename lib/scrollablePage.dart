@@ -1,46 +1,41 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/theme.dart';
+import 'package:portfolio_flutter/theme.dart';
 
 import 'components/burgermenu.dart';
 import 'home.dart';
 
-class scrollable extends StatefulWidget {
-  const scrollable({super.key});
+class ScrollablePage extends StatefulWidget {
+  const ScrollablePage({super.key});
 
   @override
-  State<scrollable> createState() => _scrollableState();
+  State<ScrollablePage> createState() => _ScrollablePageState();
 }
 
-class _scrollableState extends State<scrollable> {
+class _ScrollablePageState extends State<ScrollablePage> {
   final pageNav = PageController();
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100.0),
+        preferredSize: Size.fromHeight(80.0),
         child: AppBar(
-          title: Text('Lanrentiu Yukiko'),
+          title: Text('Yukiko Lanrentiu',
+              style: Theme.of(context).textTheme.titleMedium,),
           backgroundColor: lightGreen,
-          iconTheme: IconThemeData(size: 44),
+          iconTheme: IconThemeData(size: 44, color: textGreenColor),
           elevation: 0,
         ),
       ),
-      body:
-      PageView(
+      body: PageView(
         controller: pageNav,
-        scrollDirection: Axis.horizontal,
+        scrollDirection: Axis.vertical,
         children: [
           Home(pageNav),
         ],
       ),
       drawer: burgerMenu(context, pageNav),
     );
-
   }
 }

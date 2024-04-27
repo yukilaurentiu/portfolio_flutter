@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'components/nav_menubutton.dart';
 
-PreferredSizeWidget navBar(BuildContext context){
+PreferredSizeWidget navBar(BuildContext context, PageController pageNav){
+  void pages(int page) {
+    pageNav.jumpToPage(page);
+    Navigator.pop(context);
+  }
+
   return AppBar(
     backgroundColor: Colors.white,
     actions: <Widget>[
@@ -9,33 +14,41 @@ PreferredSizeWidget navBar(BuildContext context){
         children: [
           NavMenuButton(
               onPress: () {
-                Navigator.pushNamed(context, '/home');
+                pages(0);
               },
-              menuText: 'Home'),
+              menuText: 'home'),
           SizedBox(
             width: 10.0,
           ),
           NavMenuButton(
               onPress: () {
-                Navigator.pushNamed(context, '/home');
+                pages(1);
               },
-              menuText: 'About'),
+              menuText: 'my projects'),
           SizedBox(
             width: 10.0,
           ),
           NavMenuButton(
               onPress: () {
-                Navigator.pushNamed(context, '/home');
+                pages(2);
               },
-              menuText: 'Project'),
+              menuText: 'my skills'),
           SizedBox(
             width: 10.0,
           ),
           NavMenuButton(
               onPress: () {
-                Navigator.pushNamed(context, '/home');
+                pages(3);
               },
-              menuText: 'Contact'),
+              menuText: 'CV'),
+          SizedBox(
+            width: 10.0,
+          ),
+          NavMenuButton(
+              onPress: () {
+                pages(4);
+              },
+              menuText: 'contact me'),
           SizedBox(
             width: 10.0,
           ),

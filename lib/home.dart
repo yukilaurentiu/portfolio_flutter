@@ -9,7 +9,6 @@ class Home extends StatefulWidget {
   const Home(this.pageNav, {super.key});
   final PageController pageNav;
 
-
   @override
   State<Home> createState() => _HomeState();
 }
@@ -33,11 +32,50 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-    decoration: const BoxDecoration(
-    image: DecorationImage(
-    image: AssetImage('images/background.png'),
-    fit: BoxFit.cover),
-    ),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 100),
+            child: SizedBox(
+              width: 350, // Set the desired width for the Card
+              height: 400, // Set the desired height for the Card
+              child: Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Image(
+                        image: AssetImage('images/user_kitty.jpg'),
+                        width: 160, // Set the desired width
+                        height: 160, // Set the desired height
+                      ),
+                    ),
+                    Text(
+                      "Nice to meet you, I'm Yuki!",
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      "I'm a Fullstack Developer"
+                    ),
+                    // Your text widget
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ), // Add elevation for visual effect
+
       // body: ListView(
       //   children: [
       //     Column(
@@ -128,32 +166,31 @@ class _HomeState extends State<Home> {
       //     ),
       //   ],
       // ),
-    //   bottomNavigationBar: Container(
-    //     color: Colors.amber,
-    //     child: Column(
-    //       mainAxisSize: MainAxisSize.min,
-    //       children: [
-    //         Row(
-    //           mainAxisAlignment: MainAxisAlignment.center,
-    //           children: [
-    //             IconButton(
-    //               icon: Icon(FontAwesomeIcons.linkedin),
-    //               onPressed: () => _launchURL(urls[0]),
-    //             ),
-    //             IconButton(
-    //               icon: Icon(FontAwesomeIcons.github),
-    //               onPressed: () => _launchURL(urls[1]),
-    //             ),],),
-    //
-    // Row(mainAxisAlignment: MainAxisAlignment.center,
-    // children: [Padding(
-    //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 10.0),
-    //   child: Text('© Yukiko Laurentiu 2023'),
-    // ),]
-    // )
-    //
-    //     ],),
-      )
+      //   bottomNavigationBar: Container(
+      //     color: Colors.amber,
+      //     child: Column(
+      //       mainAxisSize: MainAxisSize.min,
+      //       children: [
+      //         Row(
+      //           mainAxisAlignment: MainAxisAlignment.center,
+      //           children: [
+      //             IconButton(
+      //               icon: Icon(FontAwesomeIcons.linkedin),
+      //               onPressed: () => _launchURL(urls[0]),
+      //             ),
+      //             IconButton(
+      //               icon: Icon(FontAwesomeIcons.github),
+      //               onPressed: () => _launchURL(urls[1]),
+      //             ),],),
+      //
+      // Row(mainAxisAlignment: MainAxisAlignment.center,
+      // children: [Padding(
+      //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 10.0),
+      //   child: Text('© Yukiko Laurentiu 2023'),
+      // ),]
+      // )
+      //
+      //     ],),
     );
   }
 }
