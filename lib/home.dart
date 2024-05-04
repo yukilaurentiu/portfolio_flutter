@@ -48,6 +48,7 @@ class _HomeState extends State<Home> {
                   width: 350, // Set the desired width for the Card
                   height: 450, // Set the desired height for the Card
                   child: Card(
+                   color: Colors.white.withOpacity(0.7),
                     elevation: 4,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -68,7 +69,7 @@ class _HomeState extends State<Home> {
                         const SizedBox(height: 10),
                         Text(
                           "Nice to meet you, I'm Yuki!",
-                          style: Theme.of(context).textTheme.titleMedium,
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
                         ),
                         const SizedBox(height: 10),
                         Padding(
@@ -83,16 +84,16 @@ class _HomeState extends State<Home> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: "I'm a ",
-                                  style: TextStyle(fontWeight: FontWeight.w200),
+                                  style: TextStyle(fontWeight: FontWeight.w300),
                                 ),
                                 TextSpan(
                                   text: "Fullstack Developer",
-                                  style: TextStyle(fontWeight: FontWeight.w400),
+                                  style: TextStyle(fontWeight: FontWeight.w500),
                                 ),
                                 TextSpan(
                                   text:
                                       " is who eager to dive into real-world projects and grow through hands-on experience within a team environment",
-                                  style: TextStyle(fontWeight: FontWeight.w200),
+                                  style: TextStyle(fontWeight: FontWeight.w300),
                                 ),
                               ],
                             ),
@@ -121,12 +122,28 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  // Add functionality for the button here
-                },
-                child: Icon(Icons.add)
-              ),
+              Container(
+                width: 60, // Adjust width to create a square
+                height: 60, // Adjust height to create a square
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), // Adjust border radius as needed
+                ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Add functionality for the button here
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.zero, // Remove default padding
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10), // Adjust border radius as needed
+                    ),
+                    elevation: 0,
+                    backgroundColor: Colors.white.withOpacity(0.7),
+                  ),
+                  child: Icon(Icons.expand_more, size: 50, color: textGreenColor,), // Adjust icon size and color
+                ),
+              )
+
             ],
           ),
         ),
