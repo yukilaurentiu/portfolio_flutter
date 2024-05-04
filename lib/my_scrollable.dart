@@ -7,14 +7,14 @@ import 'package:portfolio_flutter/theme.dart';
 import 'components/burgermenu.dart';
 import 'home.dart';
 
-class scrollable extends StatefulWidget {
-  const scrollable({super.key});
+class MyScrollable extends StatefulWidget {
+  const MyScrollable({super.key});
 
   @override
-  State<scrollable> createState() => _scrollableState();
+  State<MyScrollable> createState() => _MyScrollableState();
 }
 
-class _scrollableState extends State<scrollable> {
+class _MyScrollableState extends State<MyScrollable> {
   final pageNav = PageController();
 
 
@@ -25,7 +25,7 @@ class _scrollableState extends State<scrollable> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100.0),
         child: AppBar(
-          title: Text('Lanrentiu Yukiko',style: Theme.of(context).textTheme.titleMedium,),
+          title: Text('Yukiko Laurentiu',style: Theme.of(context).textTheme.titleMedium,),
           backgroundColor: lightGreen,
           iconTheme: IconThemeData(size: 44),
           elevation: 0,

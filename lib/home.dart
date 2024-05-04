@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_flutter/navbar.dart';
+import 'package:portfolio_flutter/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'components/projects_card.dart';
 import 'footer.dart';
@@ -39,42 +40,98 @@ class _HomeState extends State<Home> {
           ),
         ),
         child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 100),
-            child: SizedBox(
-              width: 350, // Set the desired width for the Card
-              height: 400, // Set the desired height for the Card
-              child: Card(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Image(
-                        image: AssetImage('images/user_kitty.jpg'),
-                        width: 160, // Set the desired width
-                        height: 160, // Set the desired height
-                      ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 50,bottom: 100),
+                child: SizedBox(
+                  width: 350, // Set the desired width for the Card
+                  height: 450, // Set the desired height for the Card
+                  child: Card(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    Text(
-                      "Nice to meet you, I'm Yuki!",
-                      style: Theme.of(context).textTheme.titleMedium,
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(30.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: const Image(
+                              image: AssetImage('images/user_kitty.jpg'),
+                              width: 160, // Set the desired width
+                              height: 160, // Set the desired height
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          "Nice to meet you, I'm Yuki!",
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        const SizedBox(height: 10),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40, right: 40),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: const TextSpan(
+                              style: TextStyle(
+                                color: textGreenColor,
+                                height: 1.5,
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "I'm a ",
+                                  style: TextStyle(fontWeight: FontWeight.w200),
+                                ),
+                                TextSpan(
+                                  text: "Fullstack Developer",
+                                  style: TextStyle(fontWeight: FontWeight.w400),
+                                ),
+                                TextSpan(
+                                  text:
+                                      " is who eager to dive into real-world projects and grow through hands-on experience within a team environment",
+                                  style: TextStyle(fontWeight: FontWeight.w200),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              iconSize: 30,
+                              padding: EdgeInsets.zero,
+                              icon: Icon(FontAwesomeIcons.linkedin),
+                              onPressed: () => _launchURL(urls[0]),
+                            ),
+                            IconButton(
+                              iconSize: 30,
+                              padding: EdgeInsets.zero,
+                              icon: Icon(FontAwesomeIcons.github),
+                              onPressed: () => _launchURL(urls[1]),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 8),
-                    Text(
-                        "I'm a Fullstack Developer"
-                    ),
-                    // Your text widget
-                  ],
+                  ),
                 ),
               ),
-            ),
+              ElevatedButton(
+                onPressed: () {
+                  // Add functionality for the button here
+                },
+                child: Icon(Icons.add)
+              ),
+            ],
           ),
         ),
-      ), // Add elevation for visual effect
+      ),
+      // Add elevation for visual effect
 
       // body: ListView(
       //   children: [
