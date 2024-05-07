@@ -1,39 +1,53 @@
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../theme.dart';
 
 class ProjectsCard extends StatelessWidget {
   const ProjectsCard(
       {required this.onPress,
       required this.image,
       required this.title,
+      required this.paragraph,
       super.key});
   final VoidCallback? onPress;
   final String title;
+  final String paragraph;
   final AssetImage image;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPress,
-      child: Row(
+      child: Column(
         children: [
-          const SizedBox(width: 15.0),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(50.0),
-              child: Image(
+          Center(
+              child: Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              borderRadius:
+                  BorderRadius.circular(10.0), // Adjust the radius as needed
+              image: DecorationImage(
                 image: image,
+                fit: BoxFit.cover, // Adjust the fit based on your needs
               ),
             ),
-          ),
+          )),
           Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.all(25.0),
             child: Text(
               title,
-              style: const TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  fontSize: 25,
+                  color: textPinkColor,
+                  fontWeight: FontWeight.bold),
             ),
+          ),
+          Text(
+            textAlign: TextAlign.center,
+            paragraph,
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(color: darkPink,height: 1.5,),
           ),
         ],
       ),
