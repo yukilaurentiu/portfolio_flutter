@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/theme.dart';
-import 'package:portfolio_flutter/scrollable.dart';
+import 'package:portfolio_flutter/theme.dart';
+import 'package:portfolio_flutter/my_scrollable.dart';
 import 'home.dart';
 
 void main() => runApp(MyApp());
@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: myTheme(),
-      home: const Directionality(textDirection: TextDirection.ltr,
-          child: scrollable()),);
+      home: const MyScrollable(),
+    );
       // initialRoute: 'home',
       // routes: {
       //   'home': (context) => Home(),

@@ -17,11 +17,21 @@ ThemeData myTheme() {
   return ThemeData(
     fontFamily: GoogleFonts.quicksand().fontFamily,
     textTheme: const TextTheme(
-    bodyLarge: TextStyle(
-    color: textGreenColor,
-    fontSize: 50.0,
-    height: 1.1,
-    )));}
+      titleSmall: TextStyle(
+        color: textGreenColor,
+        fontSize: 18.0,
+        height: 1.1,
+      ),
+      titleMedium: TextStyle(
+        color: textGreenColor,
+        fontSize: 21.0,
+        height: 1.1,
+        fontWeight: FontWeight.bold,
+      ),
+
+    ),
+  );
+}
 
 final burgerMenuTextStyle = TextStyle(
   fontSize: 24.0,
@@ -29,4 +39,3 @@ final burgerMenuTextStyle = TextStyle(
 );
 
 const navMenuColor = Colors.teal;
-

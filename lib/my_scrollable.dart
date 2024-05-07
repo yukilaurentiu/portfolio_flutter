@@ -2,19 +2,19 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/theme.dart';
+import 'package:portfolio_flutter/theme.dart';
 
 import 'components/burgermenu.dart';
 import 'home.dart';
 
-class scrollable extends StatefulWidget {
-  const scrollable({super.key});
+class MyScrollable extends StatefulWidget {
+  const MyScrollable({super.key});
 
   @override
-  State<scrollable> createState() => _scrollableState();
+  State<MyScrollable> createState() => _MyScrollableState();
 }
 
-class _scrollableState extends State<scrollable> {
+class _MyScrollableState extends State<MyScrollable> {
   final pageNav = PageController();
 
 
@@ -23,9 +23,9 @@ class _scrollableState extends State<scrollable> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100.0),
+        preferredSize: Size.fromHeight(70.0),
         child: AppBar(
-          title: Text('Lanrentiu Yukiko'),
+          title: Text('Yukiko Laurentiu',style: Theme.of(context).textTheme.titleMedium,),
           backgroundColor: lightGreen,
           iconTheme: IconThemeData(size: 44),
           elevation: 0,
