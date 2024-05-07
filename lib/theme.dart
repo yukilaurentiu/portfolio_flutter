@@ -28,7 +28,12 @@ ThemeData myTheme() {
         height: 1.1,
         fontWeight: FontWeight.bold,
       ),
-
+      titleLarge: TextStyle(
+        color: textGreenColor,
+        fontSize: 30.0,
+        height: 1.1,
+        fontWeight: FontWeight.bold,
+      ),
     ),
   );
 }
