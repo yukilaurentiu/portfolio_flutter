@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/projects.dart';
 import 'package:portfolio_flutter/theme.dart';
 
 import 'components/burgermenu.dart';
@@ -34,9 +35,10 @@ class _MyScrollableState extends State<MyScrollable> {
       body:
       PageView(
         controller: pageNav,
-        scrollDirection: Axis.horizontal,
+        scrollDirection: Axis.vertical,
         children: [
           Home(pageNav),
+          Projects(pageNav),
         ],
       ),
       drawer: burgerMenu(context, pageNav),
