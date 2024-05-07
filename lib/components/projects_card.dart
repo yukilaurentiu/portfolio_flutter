@@ -1,8 +1,6 @@
-import 'package:dev_icons/dev_icons.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/tech_icon.dart';
-
 import '../theme.dart';
 
 class ProjectsCard extends StatelessWidget {
@@ -11,7 +9,6 @@ class ProjectsCard extends StatelessWidget {
       required this.image,
       required this.title,
       required this.paragraph,
-      CircleAvatar? icon,
       super.key});
   final VoidCallback? onPress;
   final String title;
@@ -52,31 +49,6 @@ class ProjectsCard extends StatelessWidget {
             paragraph,
             style: Theme.of(context).textTheme.titleSmall?.copyWith(color: darkPink,height: 1.5,),
           ),
-          SizedBox(height: 30),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    techIconStyle(Icon(DevIcons.rubyPlain), yellow),
-                    techIconStyle(Icon(DevIcons.railsPlain), green),
-                    techIconStyle(Icon(DevIcons.javascriptPlain), yellow),
-                    techIconStyle(Icon(DevIcons.html5Plain), green),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    techIconStyle(Icon(DevIcons.css3Plain), green),
-                    techIconStyle(Icon(DevIcons.bootstrapPlain), yellow),
-                    techIconStyle(Icon(DevIcons.googlecloudPlain), green),
-                  ],
-                ),
-              ],
-            ),
-          )
         ],
       ),
     );
