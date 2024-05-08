@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/grow_gazzel_page.dart';
 import 'package:portfolio_flutter/travel_map_page.dart';
 import 'package:portfolio_flutter/theme.dart';
 
@@ -37,6 +38,7 @@ class _MyScrollableState extends State<MyScrollable> {
         children: [
           Home(pageNav),
           TravelMapPage(pageNav),
+          GrowGuzzlePage(pageNav),
         ],
       ),
       drawer: burgerMenu(context, pageNav),
