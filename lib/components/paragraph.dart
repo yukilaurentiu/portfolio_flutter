@@ -14,6 +14,5 @@ const List urls = [
   },
 ];
 
-const growGuzzle = 'We have developed a mobile app using Flutter and Dart, which includes AI-powered images'
-    ' to remind users to drink water, a task that is often forgotten in daily life.'
-    '\nStay hydrated and healthy while enjoying the process of watering your garden through our app😊';
+const growGuzzle = 'A mobile app written in Flutter and Dart, to remind users to drink water, a task that is often forgotten in daily life,'
+    ' combined with a build-your-own garden game to encourage continued usage of the app.';
