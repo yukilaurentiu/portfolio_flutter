@@ -43,7 +43,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
               ),
               const SizedBox(height: 30),
               ProjectsCard(
-                onPress: () => _launchUrl(Uri.parse('https://github.com/yukilaurentiu/travelmap')),
+                onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])),
                 image: const AssetImage('images/travelmap-logo.png'),
                 title: 'Travel Map',
                 paragraph: travelMap,

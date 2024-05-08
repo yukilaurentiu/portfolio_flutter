@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_flutter/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio_flutter/components/paragraph.dart';
 
 
 
@@ -23,10 +24,6 @@ class _HomeState extends State<Home> {
     }
   }
 
-  List<Uri> urls = [
-    Uri.parse('https://www.linkedin.com/in/yukikolaurentiu/'),
-    Uri.parse('https://github.com/yukilaurentiu'),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -106,13 +103,13 @@ class _HomeState extends State<Home> {
                               iconSize: 30,
                               padding: EdgeInsets.zero,
                               icon: Icon(FontAwesomeIcons.linkedin),
-                              onPressed: () => _launchUrl(urls[0]),
+                              onPressed: () => _launchUrl(urls[1]['y-l']),
                             ),
                             IconButton(
                               iconSize: 30,
                               padding: EdgeInsets.zero,
                               icon: Icon(FontAwesomeIcons.github),
-                              onPressed: () => _launchUrl(urls[1]),
+                              onPressed: () => _launchUrl(urls[1]['y-g']),
                             ),
                           ],
                         ),
