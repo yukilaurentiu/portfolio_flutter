@@ -5,6 +5,7 @@ import 'package:portfolio_flutter/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dev_icons/dev_icons.dart';
 import 'package:portfolio_flutter/components/tech_icon.dart';
+import 'components/btnStyle.dart';
 import 'components/projects_card.dart';
 
 class TravelMapPage extends StatefulWidget {
@@ -35,7 +36,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.only(top:15.0),
                 child: Text(
                   'My Projects',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textPinkColor),
@@ -47,31 +48,31 @@ class _TravelMapPageState extends State<TravelMapPage> {
                 image: const AssetImage('images/travelmap-logo.png'),
                 title: 'Travel Map',
                 paragraph: travelMap,
+                titleColor: textPinkColor,
+                pColor: darkPink,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    SizedBox(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        techIconStyle(Icon(DevIcons.rubyPlain), yellow),
-                        techIconStyle(Icon(DevIcons.railsPlain), green),
-                        techIconStyle(Icon(DevIcons.javascriptPlain), yellow),
-                        techIconStyle(Icon(DevIcons.html5Plain), green),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        techIconStyle(Icon(DevIcons.css3Plain), green),
-                        techIconStyle(Icon(DevIcons.bootstrapPlain), yellow),
-                        techIconStyle(Icon(DevIcons.googlecloudPlain), green),
-                      ],
-                    ),
-                  ],
-                ),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      techIconStyle(Icon(DevIcons.rubyPlainWordmark), yellow),
+                      techIconStyle(Icon(DevIcons.railsPlainWordmark), green),
+                      techIconStyle(Icon(DevIcons.javascriptPlain), yellow),
+                      techIconStyle(Icon(DevIcons.html5PlainWordmark), green),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      techIconStyle(Icon(DevIcons.css3PlainWordmark), yellow),
+                      techIconStyle(Icon(DevIcons.googlecloudPlain), green),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink),
+
+                ],
               ),
             ],
           ),

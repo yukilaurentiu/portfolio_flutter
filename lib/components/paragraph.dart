@@ -13,3 +13,7 @@ const List urls = [
     'y-g': 'https://github.com/yukilaurentiu',
   },
 ];
+
+const growGuzzle = 'We have developed a mobile app using Flutter and Dart, which includes AI-powered images'
+    ' to remind users to drink water, a task that is often forgotten in daily life.'
+    '\nStay hydrated and healthy while enjoying the process of watering your garden through our app😊';

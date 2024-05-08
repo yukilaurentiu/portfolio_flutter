@@ -10,8 +10,9 @@ const lightPink = Color(0xffffe5e5);
 const darkPink = Color(0xffb86f6f);
 const yellow = Color(0xffd9e646);
 const green = Color(0xff8bccc1);
-const lavender = Color(0xffdfccfb);
+const lavender = Color(0xffe8e0fa);
 const darkLavender = Color(0xff8c76ac);
+const textLavender = Color(0xff583f7d);
 
 //theme
 ThemeData myTheme() {
@@ -31,7 +32,7 @@ ThemeData myTheme() {
       ),
       titleLarge: TextStyle(
         color: textGreenColor,
-        fontSize: 33.0,
+        fontSize: 35.0,
         height: 1.1,
         fontWeight: FontWeight.bold,
       ),
