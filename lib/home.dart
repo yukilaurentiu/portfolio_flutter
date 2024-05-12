@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio_flutter/components/down_btn.dart';
 import 'package:portfolio_flutter/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
@@ -118,28 +119,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              Container(
-                width: 60, // Adjust width to create a square
-                height: 60, // Adjust height to create a square
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), // Adjust border radius as needed
-                ),
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Add functionality for the button here
-                  },
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.zero, // Remove default padding
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10), // Adjust border radius as needed
-                    ),
-                    elevation: 0,
-                    backgroundColor: Colors.white.withOpacity(0.7),
-                  ),
-                  child: Icon(Icons.expand_more, size: 50, color: textGreenColor,), // Adjust icon size and color
-                ),
-              )
-
+              downBtn(textColor: textGreenColor, onPressed: ()=> widget.pageNav.jumpToPage(1))
             ],
           ),
         ),
