@@ -6,6 +6,7 @@ import 'package:portfolio_flutter/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dev_icons/dev_icons.dart';
 import 'package:portfolio_flutter/components/tech_icon.dart';
+import 'components/down_btn.dart';
 import 'components/projects_card.dart';
 
 class GrowGuzzlePage extends StatefulWidget {
@@ -59,11 +60,13 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
                       children: [
                         techIconStyle(Icon(DevIcons.flutterPlain), yellow),
                         techIconStyle(Icon(DevIcons.dartPlainWordmark), green),
-                        techIconStyle(Icon(DevIcons.googlecloudPlain), yellow),
+                        // techIconStyle(Icon(DevIcons.googlecloudPlain), yellow),
                       ],
                     ),
                     SizedBox(height: 30),
                     BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender),
+                    SizedBox(height: 30),
+                    downBtn(backgroundColor: lightGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(3)),
                   ],
                 ),
               ),

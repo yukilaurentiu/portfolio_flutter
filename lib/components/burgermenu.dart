@@ -30,11 +30,22 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
         ),
         ListTile(
           title: Text(
-            'my project',
+            'my project 1',
             style: burgerMenuTextStyle,
           ),
           onTap: () {
             pages(1);
+            // pageNav.jumpToPage(1);
+            // Navigator.pop(context);
+          },
+        ),
+        ListTile(
+          title: Text(
+            'my project 2',
+            style: burgerMenuTextStyle,
+          ),
+          onTap: () {
+            pages(2);
             // pageNav.jumpToPage(1);
             // Navigator.pop(context);
           },
