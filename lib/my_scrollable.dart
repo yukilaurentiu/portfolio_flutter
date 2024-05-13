@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/grow_gazzel_page.dart';
+import 'package:portfolio_flutter/my_skills.dart';
 import 'package:portfolio_flutter/travel_map_page.dart';
 import 'package:portfolio_flutter/theme.dart';
 
@@ -25,7 +26,7 @@ class _MyScrollableState extends State<MyScrollable> {
         child: AppBar(
           title: Text(
             'Yukiko Laurentiu',
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
           ),
           backgroundColor: lightGreen,
           iconTheme: IconThemeData(size: 44),
@@ -39,6 +40,7 @@ class _MyScrollableState extends State<MyScrollable> {
           Home(pageNav),
           TravelMapPage(pageNav),
           GrowGuzzlePage(pageNav),
+          MySkills(pageNav),
         ],
       ),
       drawer: burgerMenu(context, pageNav),

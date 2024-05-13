@@ -66,14 +66,14 @@ class _HomeState extends State<Home> {
                         const SizedBox(height: 10),
                         Text(
                           "Nice to meet you, I'm Yuki!",
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900),
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900, fontSize: 23,),
                         ),
                         const SizedBox(height: 10),
                         Padding(
                           padding: const EdgeInsets.only(left: 40, right: 40),
                           child: RichText(
                             textAlign: TextAlign.center,
-                            text: const TextSpan(
+                            text:  TextSpan(
                               style: TextStyle(
                                 color: textGreenColor,
                                 height: 1.5,
@@ -81,16 +81,19 @@ class _HomeState extends State<Home> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: "I'm a ",
-                                  style: TextStyle(fontWeight: FontWeight.w300),
-                                ),
+                                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                    fontWeight: FontWeight.w200,
+                                ),),
                                 TextSpan(
                                   text: "Fullstack Developer",
-                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                    fontWeight: FontWeight.w700,),
                                 ),
                                 TextSpan(
                                   text:
                                       " is who eager to dive into real-world projects and grow through hands-on experience within a team environment",
-                                  style: TextStyle(fontWeight: FontWeight.w300),
+                                  style:Theme.of(context).textTheme.titleSmall?.copyWith(
+                                      fontWeight: FontWeight.w200,),
                                 ),
                               ],
                             ),
@@ -103,13 +106,13 @@ class _HomeState extends State<Home> {
                             IconButton(
                               iconSize: 30,
                               padding: EdgeInsets.zero,
-                              icon: Icon(FontAwesomeIcons.linkedin),
+                              icon: Icon(FontAwesomeIcons.linkedin, color: textPinkColor),
                               onPressed: () => _launchUrl(urls[1]['y-l']),
                             ),
                             IconButton(
                               iconSize: 30,
                               padding: EdgeInsets.zero,
-                              icon: Icon(FontAwesomeIcons.github),
+                              icon: Icon(FontAwesomeIcons.github, color: textPinkColor),
                               onPressed: () => _launchUrl(urls[1]['y-g']),
                             ),
                           ],

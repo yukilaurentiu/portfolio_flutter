@@ -41,7 +41,7 @@ class ProjectsCard extends StatelessWidget {
           child: Text(
             title,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontSize: 28, color: titleColor, fontWeight: FontWeight.bold),
+                 color: titleColor, fontWeight: FontWeight.bold),
           ),
         ),
         Text(
@@ -49,10 +49,9 @@ class ProjectsCard extends StatelessWidget {
           paragraph,
           style: Theme.of(context).textTheme.titleSmall?.copyWith(
                 color: pColor,
-                height: 1.5,
               ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
       ],
     );
   }

@@ -74,7 +74,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
                   SizedBox(height: 30),
                   BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink),
                   SizedBox(height: 20),
-                  downBtn(backgroundColor: lightGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(2)),
+                  downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(2)),
                 ],
               ),
             ],

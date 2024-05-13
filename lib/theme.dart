@@ -3,8 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 //color
 const textGreenColor = Color(0xff0e544c);
+const textLight = Color(0xfff8fdfb);
 const lightGreen = Color(0xffa9d2c5);
 const darkGreen = Color(0xff247d67);
+const backGreen = Color(0xff5da28c);
 const textPinkColor = Color(0xff5d2e2e);
 const lightPink = Color(0xffffe5e5);
 const darkPink = Color(0xffb86f6f);
@@ -22,17 +24,17 @@ ThemeData myTheme() {
       titleSmall: TextStyle(
         color: textGreenColor,
         fontSize: 18.0,
-        height: 1.1,
+        height: 1.3,
       ),
       titleMedium: TextStyle(
         color: textGreenColor,
-        fontSize: 21.0,
+        fontSize: 28.0,
         height: 1.1,
         fontWeight: FontWeight.bold,
       ),
       titleLarge: TextStyle(
         color: textGreenColor,
-        fontSize: 35.0,
+        fontSize: 40.0,
         height: 1.1,
         fontWeight: FontWeight.bold,
       ),
@@ -40,9 +42,10 @@ ThemeData myTheme() {
   );
 }
 
-final burgerMenuTextStyle = TextStyle(
+const burgerMenuTextStyle = TextStyle(
   fontSize: 24.0,
   fontWeight: FontWeight.w300,
 );
+
 
 const navMenuColor = Colors.teal;

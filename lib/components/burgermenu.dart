@@ -54,13 +54,6 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
           title: Text(
               'my skills', style: burgerMenuTextStyle),
           onTap: () {
-            pages(2);
-          },
-        ),
-        ListTile(
-          title: Text(
-              'CV', style: burgerMenuTextStyle),
-          onTap: () {
             pages(3);
           },
         ),
@@ -68,7 +61,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
           title: Text(
               'contact me', style: burgerMenuTextStyle),
           onTap: () {
-            pageNav.jumpToPage(1);
+            pages(4);
           },
         ),
 ], )
