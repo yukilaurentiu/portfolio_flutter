@@ -64,7 +64,7 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
                       ],
                     ),
                     SizedBox(height: 30),
-                    BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender),
+                    BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender, text: 'view case study',),
                     SizedBox(height: 30),
                     downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(3)),
                   ],

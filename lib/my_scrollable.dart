@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/contact.dart';
 import 'package:portfolio_flutter/grow_gazzel_page.dart';
 import 'package:portfolio_flutter/my_skills.dart';
 import 'package:portfolio_flutter/travel_map_page.dart';
@@ -41,6 +42,7 @@ class _MyScrollableState extends State<MyScrollable> {
           TravelMapPage(pageNav),
           GrowGuzzlePage(pageNav),
           MySkills(pageNav),
+          Contact(pageNav),
         ],
       ),
       drawer: burgerMenu(context, pageNav),

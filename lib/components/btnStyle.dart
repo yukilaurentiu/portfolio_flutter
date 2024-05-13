@@ -5,10 +5,12 @@ class BtnStyle extends StatelessWidget {
   const BtnStyle({
     required this.onPress,
     required this.btnColor,
+    required this.text,
     super.key,
   });
   final Color btnColor;
   final VoidCallback? onPress;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -19,7 +21,7 @@ class BtnStyle extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),),
       ),
       child: Text(
-        'view case study',
+        text,
         style: Theme.of(context).textTheme.titleSmall?.copyWith(
               color: Colors.white,
           fontWeight: FontWeight.bold,
