@@ -8,28 +8,28 @@ import 'package:portfolio_flutter/theme.dart';
 import 'components/burgermenu.dart';
 import 'home.dart';
 
-class MyScrollable extends StatefulWidget {
-  const MyScrollable({super.key});
+class Portfolio extends StatefulWidget {
+  const Portfolio({super.key});
 
   @override
-  State<MyScrollable> createState() => _MyScrollableState();
+  State<Portfolio> createState() => _PortfolioState();
 }
 
-class _MyScrollableState extends State<MyScrollable> {
+class _PortfolioState extends State<Portfolio> {
   final pageNav = PageController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
+        preferredSize: Size.fromHeight(65.0),
         child: AppBar(
           title: Text(
             'Yukiko Laurentiu',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
           ),
           backgroundColor: lightGreen,
-          iconTheme: IconThemeData(size: 44),
+          iconTheme: const IconThemeData(size: 44),
           elevation: 0,
         ),
       ),
