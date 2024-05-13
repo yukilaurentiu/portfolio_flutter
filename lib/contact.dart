@@ -53,10 +53,10 @@ class _ContactState extends State<Contact> {
                           ?.copyWith(color: textLavender),
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 80),
                   const Icon(
                     Icons.mail,
-                    size: 30,
+                    size: 40,
                     color: darkLavender,
                   ),
                   Padding(
@@ -71,11 +71,12 @@ class _ContactState extends State<Contact> {
                       },
                       child: Text(
                         'laurentiu.yuki@gmail.com',
-                        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: textLavender),
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: textLavender,fontSize: 23),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 80),
+                  BtnStyle(onPress: () => _launchUrl(Uri.parse('https://github.com/yukilaurentiu/my_cv/blob/main/YukikoLaurentiuCV.pdf')), btnColor: textLavender, text: 'Download CV', size: Size(200, 50),),
                 ],
               ),
             ),
@@ -85,17 +86,12 @@ class _ContactState extends State<Contact> {
             child: Container(
               color: textGreenColor,
               child: Padding(
-                padding: const EdgeInsets.all(50.0),
+                padding: const EdgeInsets.all(70.0),
                 child: Center(
                   child: Column(
                     children: [
                       RichText(
-                        textAlign: TextAlign.center,
                         text:  TextSpan(
-                          style: TextStyle(
-                            color: lightGreen,
-                            height: 2,
-                          ),
                           children: <TextSpan>[
                             TextSpan(
                               text: "©",
@@ -119,7 +115,7 @@ class _ContactState extends State<Contact> {
                       RichText(
                         textAlign: TextAlign.center,
                         text:  TextSpan(
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: lightGreen,
                           ),
                           children: <TextSpan>[

@@ -32,7 +32,7 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
     return Scaffold(
       backgroundColor: lavender,
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(30.0),
         child: Center(
           child: Column(
             children: [
@@ -45,7 +45,7 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
               const SizedBox(height: 30),
               ProjectsCard(
                 onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])),
-                image: const AssetImage('images/travelmap-logo.png'),
+                image: const AssetImage('images/lecamarade-logo.png'),
                 title: 'Grow Guzzle',
                 paragraph: growGuzzle,
                 titleColor: textLavender,
@@ -63,10 +63,10 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
                         // techIconStyle(Icon(DevIcons.googlecloudPlain), yellow),
                       ],
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 50),
                     BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender, text: 'view case study',),
                     SizedBox(height: 30),
-                    downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(3)),
+                    // downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(3)),
                   ],
                 ),
               ),

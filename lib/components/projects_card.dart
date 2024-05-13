@@ -36,8 +36,9 @@ class ProjectsCard extends StatelessWidget {
             ),
           ),
         )),
+        SizedBox(height:10),
         Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(30.0),
           child: Text(
             title,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(

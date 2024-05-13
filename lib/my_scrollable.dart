@@ -23,14 +23,14 @@ class _MyScrollableState extends State<MyScrollable> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
+         preferredSize: const Size.fromHeight(60.0),
         child: AppBar(
           title: Text(
             'Yukiko Laurentiu',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
           ),
           backgroundColor: lightGreen,
-          iconTheme: IconThemeData(size: 44),
+          iconTheme: const IconThemeData(size: 44),
           elevation: 0,
         ),
       ),
