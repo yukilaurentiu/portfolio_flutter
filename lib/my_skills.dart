@@ -68,20 +68,20 @@ class _MySkillsState extends State<MySkills> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Tools',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
-                ),
-              ),
-              skillStyle('Git/GitHub', context),
-              const SizedBox(height: 15),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
                   'Markup Language',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),
               skillStyle('HTML/CSS(SASS)', context),
+              const SizedBox(height: 15),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'Tools',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
+                ),
+              ),
+              skillStyle('Git/GitHub', context),
               const SizedBox(height: 15),
               Padding(
                 padding: const EdgeInsets.all(10.0),

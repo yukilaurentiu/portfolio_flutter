@@ -32,12 +32,12 @@ class _TravelMapPageState extends State<TravelMapPage> {
     return Scaffold(
       backgroundColor: lightPink,
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(30.0),
         child: Center(
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top:15.0),
+                padding: const EdgeInsets.only(top:20.0, bottom: 10),
                 child: Text(
                   'My Projects',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textPinkColor),
@@ -71,10 +71,10 @@ class _TravelMapPageState extends State<TravelMapPage> {
                   //     techIconStyle(Icon(DevIcons.googlecloudPlain), green),
                   //   ],
                   // ),
-                  SizedBox(height: 30),
-                  BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink),
+                  SizedBox(height: 50),
+                  BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink,text: 'view case study'),
                   SizedBox(height: 20),
-                  downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(2)),
+                  // downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(2)),
                 ],
               ),
             ],

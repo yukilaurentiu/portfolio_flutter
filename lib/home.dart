@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                           child: RichText(
                             textAlign: TextAlign.center,
                             text:  TextSpan(
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: textGreenColor,
                                 height: 1.5,
                               ),
@@ -106,15 +106,16 @@ class _HomeState extends State<Home> {
                             IconButton(
                               iconSize: 30,
                               padding: EdgeInsets.zero,
-                              icon: Icon(FontAwesomeIcons.linkedin, color: textPinkColor),
-                              onPressed: () => _launchUrl(urls[1]['y-l']),
+                              icon: const Icon(FontAwesomeIcons.linkedin, color: textPinkColor),
+                              onPressed: () => _launchUrl(Uri.parse(urls[1]['y-l']))
                             ),
                             IconButton(
                               iconSize: 30,
                               padding: EdgeInsets.zero,
-                              icon: Icon(FontAwesomeIcons.github, color: textPinkColor),
-                              onPressed: () => _launchUrl(urls[1]['y-g']),
+                              icon: const Icon(FontAwesomeIcons.github, color: textPinkColor),
+                              onPressed: () => _launchUrl(Uri.parse(urls[1]['y-g'])),
                             ),
+
                           ],
                         ),
                       ],
