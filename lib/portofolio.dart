@@ -23,16 +23,57 @@ class _PortfolioState extends State<Portfolio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(65.0),
+        preferredSize: const Size.fromHeight(60.0),
         child: AppBar(
           title: Text(
             'Yukiko Laurentiu',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
           ),
           backgroundColor: lightGreen,
-          iconTheme: const IconThemeData(size: 44),
+          iconTheme: const IconThemeData(size: 44, color: textGreenColor),
           elevation: 0,
+          actions: [
+            PopupMenuButton<int>(
+              icon:Icon(
+                Icons.g_translate,
+                size: 25,
+                color: textGreenColor,
+              ),
+              color: lightPink,
+              itemBuilder: (context) => [
+                // PopupMenuItem 1
+                const PopupMenuItem(
+                  value: 1,
+                  // row with 2 children
+                  child: Row(
+                    children: <Widget>[
+                      Text("English")
+                    ],
+                  ),
+                ),
+                // PopupMenuItem 2
+                const PopupMenuItem(
+                  value: 2,
+                  // row with two children
+                  child: Row(
+                    children: [
+                      Text("日本語")
+                    ],
+                  ),
+                ),
+              ],
+              elevation: 2,
+              // onSelected: () {
+                // if (value == 1) {
+                //   appLanguage.changeLanguage(const Locale("en"));
+                // } else if (value == 2) {
+                //   appLanguage.changeLanguage(const Locale("ne"));
+                // }
+              // },
+            ),
+          ],
         ),
+
       ),
       body: PageView(
         controller: pageNav,
