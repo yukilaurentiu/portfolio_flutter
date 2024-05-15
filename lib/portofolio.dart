@@ -47,7 +47,7 @@ class _PortfolioState extends State<Portfolio> {
                   // row with 2 children
                   child: Row(
                     children: <Widget>[
-                      Text("English")
+                      Text("🇬🇧English")
                     ],
                   ),
                 ),
@@ -57,7 +57,7 @@ class _PortfolioState extends State<Portfolio> {
                   // row with two children
                   child: Row(
                     children: [
-                      Text("日本語")
+                      Text("🇯🇵日本語")
                     ],
                   ),
                 ),

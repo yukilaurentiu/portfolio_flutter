@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/theme.dart';
 import 'package:portfolio_flutter/portofolio.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 
 void main() => runApp(const MyApp());
@@ -87,7 +86,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    child: const Text('English'),
+                    child: const Text('🇬🇧English'),
                     onPressed: () {
                       _localization.translate('en');
                     },
@@ -96,7 +95,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 const SizedBox(width: 8.0),
                 Expanded(
                   child: ElevatedButton(
-                    child: const Text('日本語'),
+                    child: const Text('🇯🇵日本語'),
                     onPressed: () {
                       _localization.translate('ja', save: false);
                     },
@@ -109,20 +108,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: 'Current Language',
               content: _localization.getLanguageName(),
             ),
-            ItemWidget(
-              title: 'String Format',
-              content: Strings.format(
-                'Hello %a, this is me %a.',
-                ['Dara', 'Sopheak'],
-              ),
-            ),
-            ItemWidget(
-              title: 'Context Format String',
-              content: context.formatString(
-                AppLocale.thisIs,
-                [AppLocale.title, 'LATEST'],
-              ),
-            ),
+            // ItemWidget(
+            //   title: 'String Format',
+            //   content: Strings.format(
+            //     'Hello %a, this is me %a.',
+            //     ['Dara', 'Sopheak'],
+            //   ),
+            // ),
+            // ItemWidget(
+            //   title: 'Context Format String',
+            //   content: context.formatString(
+            //     AppLocale.thisIs,
+            //     [AppLocale.title, 'LATEST'],
+            //   ),
+            // ),
           ],
         ),
       ),
