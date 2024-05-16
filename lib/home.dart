@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(30.0),
+                          padding: EdgeInsets.all(25.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: const Image(

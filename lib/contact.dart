@@ -71,12 +71,18 @@ class _ContactState extends State<Contact> {
                       },
                       child: Text(
                         'laurentiu.yuki@gmail.com',
-                        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: textLavender,fontSize: 23),
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: textLavender, fontSize: 23),
                       ),
                     ),
                   ),
                   const SizedBox(height: 80),
-                  BtnStyle(onPress: () => _launchUrl(Uri.parse('https://github.com/yukilaurentiu/my_cv/blob/main/YukikoLaurentiuCV.pdf')), btnColor: textLavender, text: 'Download CV', size: Size(200, 50),),
+                  BtnStyle(
+                    onPress: () => _launchUrl(Uri.parse(
+                        'https://github.com/yukilaurentiu/my_cv/blob/main/YukikoLaurentiuCV.pdf')),
+                    btnColor: textLavender,
+                    text: 'Download CV',
+                    size: Size(220, 50),
+                  ),
                 ],
               ),
             ),
@@ -91,17 +97,27 @@ class _ContactState extends State<Contact> {
                   child: Column(
                     children: [
                       RichText(
-                        text:  TextSpan(
+                        text: TextSpan(
                           children: <TextSpan>[
                             TextSpan(
                               text: "©",
-                              style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w200, color: textLight,
-                              ),),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.w200,
+                                    color: textLight,
+                                  ),
+                            ),
                             TextSpan(
                               text: " Yukiko Laurentiu.",
-                              style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w700, color: textLight,),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    color: textLight,
+                                  ),
                             ),
                           ],
                         ),
@@ -109,25 +125,36 @@ class _ContactState extends State<Contact> {
                       Text(
                         'All Rights reserved.',
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          color: textLight,),
+                              color: textLight,
+                            ),
                       ),
                       const SizedBox(height: 15),
                       RichText(
                         textAlign: TextAlign.center,
-                        text:  TextSpan(
+                        text: TextSpan(
                           style: const TextStyle(
                             color: lightGreen,
                           ),
                           children: <TextSpan>[
                             TextSpan(
                               text: "Design by ",
-                              style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w200, color: textLight,
-                              ),),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.w200,
+                                    color: textLight,
+                                  ),
+                            ),
                             TextSpan(
                               text: "Lisa Brune",
-                              style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w700, color: textLight,),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    color: textLight,
+                                  ),
                             ),
                           ],
                         ),
