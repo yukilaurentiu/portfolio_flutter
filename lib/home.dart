@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_flutter/components/down_btn.dart';
+import 'package:portfolio_flutter/components/en_translate.dart';
 import 'package:portfolio_flutter/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
+
+import 'components/translation.dart';
 
 
 
@@ -65,7 +68,7 @@ class _HomeState extends State<Home> {
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          "Nice to meet you, I'm Yuki!",
+                          t('home-t'),
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900, fontSize: 23,),
                         ),
                         const SizedBox(height: 10),

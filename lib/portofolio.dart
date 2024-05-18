@@ -7,10 +7,12 @@ import 'package:portfolio_flutter/travel_map_page.dart';
 import 'package:portfolio_flutter/theme.dart';
 
 import 'components/burgermenu.dart';
+import 'components/translation.dart';
 import 'home.dart';
 
 class Portfolio extends StatefulWidget {
-  const Portfolio({super.key});
+  final void Function(String) updateLan;
+   const Portfolio({required this.updateLan, super.key});
 
   @override
   State<Portfolio> createState() => _PortfolioState();
@@ -63,13 +65,13 @@ class _PortfolioState extends State<Portfolio> {
                 ),
               ],
               elevation: 2,
-              // onSelected: () {
-                // if (value == 1) {
-                //   appLanguage.changeLanguage(const Locale("en"));
-                // } else if (value == 2) {
-                //   appLanguage.changeLanguage(const Locale("ne"));
-                // }
-              // },
+              onSelected: (value) {
+                if (value == 1) {
+                 widget.updateLan('en');
+                } else if (value == 2) {
+                  widget.updateLan('jp');
+                }
+              },
             ),
           ],
         ),
