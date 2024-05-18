@@ -42,6 +42,6 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-String? getLocalizedString(BuildContext context, String key) {
-  return AppLocalizations.of(context)?.getString(key);
-}
+// String? getLocalizedString(BuildContext context, String key) {
+//   return AppLocalizations.of(context)?.getString(key);
+// }
