@@ -1,7 +1,7 @@
 const Map<String, String> jPTranslate = {
   'home': 'ホーム',
   'home-t': "ラウレンチウ有希子です",
-  'home-p1': '私は',
+  'home-p': '私は',
   'home-p2': 'フルスタックデベロッパー',
   'home-p3': 'で、現場のプロジェクトに積極的に取り組み、チームでの経験を通じて成長したいと志願しています。',
   'project': 'プロジェクト',

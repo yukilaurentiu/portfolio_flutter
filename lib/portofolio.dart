@@ -12,7 +12,7 @@ import 'home.dart';
 
 class Portfolio extends StatefulWidget {
   final void Function(String) updateLan;
-   const Portfolio({required this.updateLan, super.key});
+  const Portfolio({required this.updateLan, super.key});
 
   @override
   State<Portfolio> createState() => _PortfolioState();
@@ -29,14 +29,15 @@ class _PortfolioState extends State<Portfolio> {
         child: AppBar(
           title: Text(
             'Yukiko Laurentiu',
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
+            style:
+                Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
           ),
           backgroundColor: lightGreen,
           iconTheme: const IconThemeData(size: 44, color: textGreenColor),
           elevation: 0,
           actions: [
             PopupMenuButton<int>(
-              icon:Icon(
+              icon: Icon(
                 Icons.g_translate,
                 size: 25,
                 color: textGreenColor,
@@ -48,9 +49,7 @@ class _PortfolioState extends State<Portfolio> {
                   value: 1,
                   // row with 2 children
                   child: Row(
-                    children: <Widget>[
-                      Text("🇬🇧English")
-                    ],
+                    children: <Widget>[Text("🇬🇧English")],
                   ),
                 ),
                 // PopupMenuItem 2
@@ -58,24 +57,24 @@ class _PortfolioState extends State<Portfolio> {
                   value: 2,
                   // row with two children
                   child: Row(
-                    children: [
-                      Text("🇯🇵日本語")
-                    ],
+                    children: [Text("🇯🇵日本語")],
                   ),
                 ),
               ],
               elevation: 2,
               onSelected: (value) {
-                if (value == 1) {
-                 widget.updateLan('en');
-                } else if (value == 2) {
-                  widget.updateLan('jp');
+                switch (value) {
+                  case 1:
+                    widget.updateLan('en');
+                    break;
+                  case 2:
+                    widget.updateLan('jp');
+                    break;
                 }
               },
             ),
           ],
         ),
-
       ),
       body: PageView(
         controller: pageNav,
@@ -88,7 +87,7 @@ class _PortfolioState extends State<Portfolio> {
           Contact(pageNav),
         ],
       ),
-      drawer: burgerMenu(context, pageNav),
+      drawer: burgerMenu(context, pageNav, widget.updateLan),
     );
   }
 }

@@ -83,18 +83,18 @@ class _HomeState extends State<Home> {
                               ),
                               children: <TextSpan>[
                                 TextSpan(
-                                  text: "I'm a ",
+                                  text: t("home-p"),
                                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                     fontWeight: FontWeight.w200,
                                 ),),
                                 TextSpan(
-                                  text: "Fullstack Developer",
+                                  text: t("home-p2"),
                                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                     fontWeight: FontWeight.w700,),
                                 ),
                                 TextSpan(
                                   text:
-                                      " is who eager to dive into real-world projects and grow through hands-on experience within a team environment",
+                                  t("home-p3"),
                                   style:Theme.of(context).textTheme.titleSmall?.copyWith(
                                       fontWeight: FontWeight.w200,),
                                 ),

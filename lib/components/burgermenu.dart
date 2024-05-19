@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/components/translation.dart';
 import 'package:portfolio_flutter/theme.dart';
 
-Drawer burgerMenu(BuildContext context, PageController pageNav) {
+Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String) updateLan) {
   void pages(int page) {
     pageNav.jumpToPage(page);
     Navigator.pop(context);
@@ -18,7 +19,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
           ),
           ListTile(
             title: Text(
-              'home',
+              t('home'),
               style: burgerMenuTextStyle,
             ),
             onTap: () {
@@ -29,7 +30,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
           ),
           ListTile(
             title: Text(
-              'my project 1',
+              t('b-p1'),
               style: burgerMenuTextStyle,
             ),
             onTap: () {
@@ -40,7 +41,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
           ),
           ListTile(
             title: Text(
-              'my project 2',
+              t('b-p2'),
               style: burgerMenuTextStyle,
             ),
             onTap: () {
@@ -50,13 +51,13 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
             },
           ),
           ListTile(
-            title: Text('my skills', style: burgerMenuTextStyle),
+            title: Text(t('b-s'), style: burgerMenuTextStyle),
             onTap: () {
               pages(3);
             },
           ),
           ListTile(
-            title: Text('contact me', style: burgerMenuTextStyle),
+            title: Text(t('b-c'), style: burgerMenuTextStyle),
             onTap: () {
               pages(4);
             },
@@ -65,7 +66,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
             Padding(
               padding: const EdgeInsets.only(left: 10.0, top: 10),
               child: PopupMenuButton<int>(
-                icon:Icon(
+                icon:const Icon(
                   Icons.g_translate,
                   size: 35,
                   color: textGreenColor,
@@ -94,13 +95,16 @@ Drawer burgerMenu(BuildContext context, PageController pageNav) {
                   ),
                 ],
                 elevation: 2,
-                // onSelected: () {
-                // if (value == 1) {
-                //   appLanguage.changeLanguage(const Locale("en"));
-                // } else if (value == 2) {
-                //   appLanguage.changeLanguage(const Locale("ne"));
-                // }
-                // },
+                onSelected: (value) {
+                  switch (value) {
+                    case 1:
+                      updateLan('en');
+                      break;
+                    case 2:
+                      updateLan('jp');
+                      break;
+                  }
+                },
               ),
             ),
           ]),
