@@ -8,6 +8,7 @@ import 'package:dev_icons/dev_icons.dart';
 import 'package:portfolio_flutter/components/tech_icon.dart';
 import 'components/down_btn.dart';
 import 'components/projects_card.dart';
+import 'components/translation.dart';
 
 class GrowGuzzlePage extends StatefulWidget {
   const GrowGuzzlePage(this.pageNav, {super.key});
@@ -46,8 +47,8 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
               ProjectsCard(
                 onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])),
                 image: const AssetImage('images/lecamarade-logo.png'),
-                title: 'Grow Guzzle',
-                paragraph: growGuzzle,
+                title: "Grow Guzzle",
+                paragraph: t('grow-p'),
                 titleColor: textLavender,
                 pColor: darkLavender,
               ),
@@ -64,7 +65,7 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
                       ],
                     ),
                     SizedBox(height: 50),
-                    BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender, text: 'view case study',),
+                    BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender, text: t('project-bnt'),),
                     SizedBox(height: 30),
                     // downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(3)),
                   ],

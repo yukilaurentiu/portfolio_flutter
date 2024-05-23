@@ -12,6 +12,7 @@ import 'package:portfolio_flutter/components/tech_icon.dart';
 import 'components/down_btn.dart';
 import 'components/projects_card.dart';
 import 'components/skills_style.dart';
+import 'components/translation.dart';
 
 class Contact extends StatefulWidget {
   const Contact(this.pageNav, {super.key});
@@ -46,11 +47,8 @@ class _ContactState extends State<Contact> {
                   Padding(
                     padding: const EdgeInsets.only(top: 50.0),
                     child: Text(
-                      'Contact me',
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleLarge
-                          ?.copyWith(color: textLavender),
+                      t('contact'),
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textLavender),
                     ),
                   ),
                   const SizedBox(height: 80),
@@ -66,17 +64,23 @@ class _ContactState extends State<Contact> {
                         Clipboard.setData(const ClipboardData(
                             text: 'laurentiu.yuki@gmail.com'));
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Email address copied')),
+                          SnackBar(content: Text(t('contact-m'))),
                         );
                       },
                       child: Text(
                         'laurentiu.yuki@gmail.com',
-                        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: textLavender,fontSize: 23),
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: textLavender, fontSize: 23),
                       ),
                     ),
                   ),
                   const SizedBox(height: 80),
-                  BtnStyle(onPress: () => _launchUrl(Uri.parse('https://github.com/yukilaurentiu/my_cv/blob/main/YukikoLaurentiuCV.pdf')), btnColor: textLavender, text: 'Download CV', size: Size(200, 50),),
+                  BtnStyle(
+                    onPress: () => _launchUrl(Uri.parse(
+                        'https://github.com/yukilaurentiu/my_cv/blob/main/YukikoLaurentiuCV.pdf')),
+                    btnColor: textLavender,
+                    text: t('contact-btn'),
+                    size: Size(220, 50),
+                  ),
                 ],
               ),
             ),
@@ -91,17 +95,24 @@ class _ContactState extends State<Contact> {
                   child: Column(
                     children: [
                       RichText(
-                        text:  TextSpan(
+                        text: TextSpan(
                           children: <TextSpan>[
                             TextSpan(
                               text: "©",
                               style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w200, color: textLight,
-                              ),),
+                                    fontWeight: FontWeight.w200,
+                                    color: textLight,
+                                  ),
+                            ),
                             TextSpan(
                               text: " Yukiko Laurentiu.",
-                              style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w700, color: textLight,),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    color: textLight,
+                                  ),
                             ),
                           ],
                         ),
@@ -109,12 +120,13 @@ class _ContactState extends State<Contact> {
                       Text(
                         'All Rights reserved.',
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          color: textLight,),
+                              color: textLight,
+                            ),
                       ),
                       const SizedBox(height: 15),
                       RichText(
                         textAlign: TextAlign.center,
-                        text:  TextSpan(
+                        text: TextSpan(
                           style: const TextStyle(
                             color: lightGreen,
                           ),
@@ -122,12 +134,16 @@ class _ContactState extends State<Contact> {
                             TextSpan(
                               text: "Design by ",
                               style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w200, color: textLight,
-                              ),),
+                                    fontWeight: FontWeight.w200,
+                                    color: textLight,
+                                  ),
+                            ),
                             TextSpan(
                               text: "Lisa Brune",
                               style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                fontWeight: FontWeight.w700, color: textLight,),
+                                    fontWeight: FontWeight.w700,
+                                    color: textLight,
+                                  ),
                             ),
                           ],
                         ),

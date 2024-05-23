@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_flutter/components/down_btn.dart';
+import 'package:portfolio_flutter/components/en_translate.dart';
 import 'package:portfolio_flutter/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
+
+import 'components/translation.dart';
 
 
 
@@ -53,7 +56,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(30.0),
+                          padding: EdgeInsets.all(25.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: const Image(
@@ -65,7 +68,7 @@ class _HomeState extends State<Home> {
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          "Nice to meet you, I'm Yuki!",
+                          t('home-t'),
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900, fontSize: 23,),
                         ),
                         const SizedBox(height: 10),
@@ -80,18 +83,18 @@ class _HomeState extends State<Home> {
                               ),
                               children: <TextSpan>[
                                 TextSpan(
-                                  text: "I'm a ",
+                                  text: t("home-p"),
                                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                     fontWeight: FontWeight.w200,
                                 ),),
                                 TextSpan(
-                                  text: "Fullstack Developer",
+                                  text: t("home-p2"),
                                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                     fontWeight: FontWeight.w700,),
                                 ),
                                 TextSpan(
                                   text:
-                                      " is who eager to dive into real-world projects and grow through hands-on experience within a team environment",
+                                  t("home-p3"),
                                   style:Theme.of(context).textTheme.titleSmall?.copyWith(
                                       fontWeight: FontWeight.w200,),
                                 ),

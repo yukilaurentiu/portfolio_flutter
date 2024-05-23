@@ -7,10 +7,12 @@ import 'package:portfolio_flutter/travel_map_page.dart';
 import 'package:portfolio_flutter/theme.dart';
 
 import 'components/burgermenu.dart';
+import 'components/translation.dart';
 import 'home.dart';
 
 class Portfolio extends StatefulWidget {
-  const Portfolio({super.key});
+  final void Function(String) updateLan;
+  const Portfolio({required this.updateLan, super.key});
 
   @override
   State<Portfolio> createState() => _PortfolioState();
@@ -23,15 +25,55 @@ class _PortfolioState extends State<Portfolio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(65.0),
+        preferredSize: const Size.fromHeight(60.0),
         child: AppBar(
           title: Text(
             'Yukiko Laurentiu',
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
+            style:
+                Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
           ),
           backgroundColor: lightGreen,
-          iconTheme: const IconThemeData(size: 44),
+          iconTheme: const IconThemeData(size: 44, color: textGreenColor),
           elevation: 0,
+          actions: [
+            PopupMenuButton<int>(
+              icon: Icon(
+                Icons.g_translate,
+                size: 25,
+                color: textGreenColor,
+              ),
+              color: lightPink,
+              itemBuilder: (context) => [
+                // PopupMenuItem 1
+                const PopupMenuItem(
+                  value: 1,
+                  // row with 2 children
+                  child: Row(
+                    children: <Widget>[Text("🇬🇧English")],
+                  ),
+                ),
+                // PopupMenuItem 2
+                const PopupMenuItem(
+                  value: 2,
+                  // row with two children
+                  child: Row(
+                    children: [Text("🇯🇵日本語")],
+                  ),
+                ),
+              ],
+              elevation: 2,
+              onSelected: (value) {
+                switch (value) {
+                  case 1:
+                    widget.updateLan('en');
+                    break;
+                  case 2:
+                    widget.updateLan('jp');
+                    break;
+                }
+              },
+            ),
+          ],
         ),
       ),
       body: PageView(
@@ -45,7 +87,7 @@ class _PortfolioState extends State<Portfolio> {
           Contact(pageNav),
         ],
       ),
-      drawer: burgerMenu(context, pageNav),
+      drawer: burgerMenu(context, pageNav, widget.updateLan),
     );
   }
 }
