@@ -28,5 +28,4 @@ const Map<String, String> enTranslate = {
   'b-p1': 'my project 1',
   'b-p2': 'my project 2',
   'b-s': 'my skills',
-  'b-c': 'contact me',
 };

@@ -18,11 +18,10 @@ const Map<String, String> jPTranslate = {
   'skill3': 'マークアップ言語',
   'skill4': 'ツール',
   'skill5': 'オペレーティングシステム',
-  'contact': 'コンタクト',
+  'contact': '連絡先',
   'contact-m': 'メールアドレスをコピーしました',
   'contact-btn': '履歴書ダウンロード',
   'b-p1': 'プロジェクト 1',
   'b-p2': 'プロジェクト 2',
   'b-s': 'スキル',
-  'b-c': 'コンタクト',
 };

@@ -57,7 +57,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String)
             },
           ),
           ListTile(
-            title: Text(t('b-c'), style: burgerMenuTextStyle),
+            title: Text(t('contact'), style: burgerMenuTextStyle),
             onTap: () {
               pages(4);
             },

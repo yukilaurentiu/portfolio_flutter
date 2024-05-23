@@ -88,7 +88,9 @@ class _MySkillsState extends State<MySkills> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   t('skill5'),
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: Colors.white,
+                  fontSize: 26),
                 ),
               ),
               skillStyle('Linux/macOS', context),
