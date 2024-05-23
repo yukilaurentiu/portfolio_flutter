@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/theme.dart';
 import 'package:portfolio_flutter/portofolio.dart';
-import 'package:flutter_localization/flutter_localization.dart';
-
-import 'components/app_localizations.dart';
 import 'components/translation.dart';
 
 void main() => runApp(const MyApp());
