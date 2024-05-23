@@ -9,6 +9,7 @@ import 'package:portfolio_flutter/components/tech_icon.dart';
 import 'components/down_btn.dart';
 import 'components/projects_card.dart';
 import 'components/skills_style.dart';
+import 'components/translation.dart';
 
 class MySkills extends StatefulWidget {
   const MySkills(this.pageNav, {super.key});
@@ -40,7 +41,7 @@ class _MySkillsState extends State<MySkills> {
               Padding(
                 padding: const EdgeInsets.only(top: 15.0),
                 child: Text(
-                  'My Skills',
+                  t('skill'),
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white),
                 ),
               ),
@@ -48,7 +49,7 @@ class _MySkillsState extends State<MySkills> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Language',
+                  t('skill1'),
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),
@@ -59,7 +60,7 @@ class _MySkillsState extends State<MySkills> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Framework',
+                  t('skill2'),
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),
@@ -68,7 +69,7 @@ class _MySkillsState extends State<MySkills> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Markup Language',
+                  t('skill3'),
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),
@@ -77,7 +78,7 @@ class _MySkillsState extends State<MySkills> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Tools',
+                  t('skill4'),
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),
@@ -86,7 +87,7 @@ class _MySkillsState extends State<MySkills> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Operating Systems',
+                  t('skill5'),
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),

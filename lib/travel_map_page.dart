@@ -8,6 +8,7 @@ import 'package:portfolio_flutter/components/tech_icon.dart';
 import 'components/btnStyle.dart';
 import 'components/down_btn.dart';
 import 'components/projects_card.dart';
+import 'components/translation.dart';
 
 class TravelMapPage extends StatefulWidget {
   const TravelMapPage(this.pageNav, {super.key});
@@ -39,7 +40,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
               Padding(
                 padding: const EdgeInsets.only(top:20.0, bottom: 10),
                 child: Text(
-                  'My Projects',
+                  t('project'),
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textPinkColor),
                 ),
               ),
@@ -48,7 +49,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
                 onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])),
                 image: const AssetImage('images/travelmap-logo.png'),
                 title: 'Travel Map',
-                paragraph: travelMap,
+                paragraph: t('travel-p'),
                 titleColor: textPinkColor,
                 pColor: darkPink,
               ),
@@ -72,7 +73,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
                   //   ],
                   // ),
                   SizedBox(height: 50),
-                  BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink,text: 'view case study'),
+                  BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink,text: t('project-bnt')),
                   SizedBox(height: 20),
                   // downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(2)),
                 ],
