@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/theme/theme.dart';
 
+
+import '../theme/color.dart';
+
 const skillText = TextStyle(
   color: textLight,
   fontWeight: FontWeight.w500,

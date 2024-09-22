@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/translation.dart';
 import 'package:portfolio_flutter/theme/theme.dart';
 
+import '../theme/color.dart';
 import '../theme/mobile_theme.dart';
 
 Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String) updateLan) {

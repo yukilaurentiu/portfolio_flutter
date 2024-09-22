@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/contact.dart';
 import 'package:portfolio_flutter/grow_guzzle_page.dart';
 import 'package:portfolio_flutter/my_skills.dart';
+import 'package:portfolio_flutter/theme/color.dart';
 import 'package:portfolio_flutter/travel_map_page.dart';
 import 'package:portfolio_flutter/theme/theme.dart';
 import 'components/burgermenu.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
+import 'package:portfolio_flutter/theme/color.dart';
 import 'package:portfolio_flutter/theme/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dev_icons/dev_icons.dart';

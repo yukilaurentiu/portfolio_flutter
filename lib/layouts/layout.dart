@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Layout {
+  static String mobile = 'mobile';
+  static String desktop = 'desktop';
+
   static String layout = 'mobile';
 
   static void setLayout(BuildContext context) {
@@ -8,9 +11,9 @@ class Layout {
     double screenWidth = mediaSize.width;
 
     if (screenWidth < 600) {
-      layout = 'mobile';
+      layout = mobile;
     } else {
-      layout = 'desktop';
+      layout = desktop;
     }
   }
 

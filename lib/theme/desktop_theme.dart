@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'color.dart';
+import '../theme/color.dart';
 
-
-ThemeData mobileTheme() {
+ThemeData desktopTheme() {
   return ThemeData(
     fontFamily: GoogleFonts.quicksand().fontFamily,
     textTheme: const TextTheme(
@@ -14,7 +13,7 @@ ThemeData mobileTheme() {
       ),
       titleMedium: TextStyle(
         color: textGreenColor,
-        fontSize: 23.0,
+        fontSize: 30.0,
         height: 1.1,
         fontWeight: FontWeight.bold,
       ),
@@ -28,9 +27,4 @@ ThemeData mobileTheme() {
   );
 }
 
-const burgerMenuTextStyle = TextStyle(
-  fontSize: 24.0,
-  fontWeight: FontWeight.w300,
-  color: textGreenColor,
-);
 
