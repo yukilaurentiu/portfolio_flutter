@@ -10,7 +10,7 @@ class Layout {
     if (screenWidth < 600) {
       layout = 'mobile';
     } else {
-      layout = 'laptop';
+      layout = 'desktop';
     }
   }
 
