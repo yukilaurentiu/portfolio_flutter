@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:portfolio_flutter/components/btnStyle.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
-import 'package:portfolio_flutter/theme.dart';
+import 'package:portfolio_flutter/theme/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dev_icons/dev_icons.dart';
 import 'package:portfolio_flutter/components/tech_icon.dart';

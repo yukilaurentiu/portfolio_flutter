@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme.dart';
+import '../theme/theme.dart';
 
 class NavMenuButton extends StatelessWidget {
   NavMenuButton({required this.onPress, required this.menuText, this.color = navMenuColor, super.key});

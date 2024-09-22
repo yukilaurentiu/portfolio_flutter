@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/translation.dart';
-import 'package:portfolio_flutter/theme.dart';
+import 'package:portfolio_flutter/theme/theme.dart';
 
 Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String) updateLan) {
   void pages(int page) {

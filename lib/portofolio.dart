@@ -1,18 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/contact.dart';
-import 'package:portfolio_flutter/grow_gazzel_page.dart';
+import 'package:portfolio_flutter/grow_guzzle_page.dart';
 import 'package:portfolio_flutter/my_skills.dart';
 import 'package:portfolio_flutter/travel_map_page.dart';
-import 'package:portfolio_flutter/theme.dart';
-
+import 'package:portfolio_flutter/theme/theme.dart';
 import 'components/burgermenu.dart';
-import 'components/translation.dart';
 import 'home.dart';
 
 class Portfolio extends StatefulWidget {
   final void Function(String) updateLan;
-  const Portfolio({required this.updateLan, super.key});
+  final String layout;
+  const Portfolio({required this.updateLan, super.key, required this.layout});
 
   @override
   State<Portfolio> createState() => _PortfolioState();
@@ -37,7 +35,7 @@ class _PortfolioState extends State<Portfolio> {
           elevation: 0,
           actions: [
             PopupMenuButton<int>(
-              icon: Icon(
+              icon: const Icon(
                 Icons.g_translate,
                 size: 25,
                 color: textGreenColor,

@@ -17,7 +17,7 @@ const darkLavender = Color(0xff8c76ac);
 const textLavender = Color(0xff583f7d);
 
 //theme
-ThemeData myTheme() {
+ThemeData mainTheme() {
   return ThemeData(
     fontFamily: GoogleFonts.quicksand().fontFamily,
     textTheme: const TextTheme(
