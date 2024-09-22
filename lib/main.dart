@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/theme.dart';
+import 'package:portfolio_flutter/theme/theme.dart';
 import 'package:portfolio_flutter/portofolio.dart';
 import 'components/translation.dart';
+import 'layouts/responsive_layout.dart';
 
 void main() => runApp(const MyApp());
 
@@ -27,8 +28,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: myTheme(),
-      home: Portfolio(updateLan: updateLan),
+      theme: mainTheme(),
+      home: ResponsiveLayout(
+        layoutBuilder: (layout) => Portfolio(layout: layout, updateLan: updateLan),
+      ),
+      // Portfolio(updateLan: updateLan),
+      //
     );
   }
 }
