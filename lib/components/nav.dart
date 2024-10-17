@@ -1,75 +1,69 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/translation.dart';
-import 'package:portfolio_flutter/theme/theme.dart';
-
-import '../theme/mobile_theme.dart';
 import '../theme/color.dart';
+import 'nav_menubutton.dart';
 
-Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String) updateLan) {
+PreferredSizeWidget navBar(
+    BuildContext context, PageController pageNav, Function(String) updateLan) {
   void pages(int page) {
     pageNav.jumpToPage(page);
     Navigator.pop(context);
   }
 
-  return Drawer(
-      backgroundColor: lightGreen.withOpacity(0.9),
-      child: ListView(
-        padding: EdgeInsets.zero,
+  return AppBar(
+    actions: <Widget>[
+      Row(
         children: [
-          const SizedBox(
-            height: 50.0,
-          ),
-          ListTile(
-            title: Text(
-              t('home'),
-              style: burgerMenuTextStyle,
-            ),
-            onTap: () {
+          NavMenuButton(
+            onPress: () {
               pages(0);
-              // pageNav.jumpToPage(1);
-              // Navigator.pop(context);
             },
+            menuText: t('home'),
           ),
-          ListTile(
-            title: Text(
-              t('b-p1'),
-              style: burgerMenuTextStyle,
-            ),
-            onTap: () {
+          SizedBox(
+            width: 10.0,
+          ),
+          NavMenuButton(
+            onPress: () {
               pages(1);
-              // pageNav.jumpToPage(1);
-              // Navigator.pop(context);
             },
+            menuText: t('b-p1'),
           ),
-          ListTile(
-            title: Text(
-              t('b-p2'),
-              style: burgerMenuTextStyle,
-            ),
-            onTap: () {
+          SizedBox(
+            width: 10.0,
+          ),
+          NavMenuButton(
+            onPress: () {
               pages(2);
-              // pageNav.jumpToPage(1);
-              // Navigator.pop(context);
             },
+            menuText: t('b-p2'),
           ),
-          ListTile(
-            title: Text(t('b-s'), style: burgerMenuTextStyle),
-            onTap: () {
+          SizedBox(
+            width: 10.0,
+          ),
+          NavMenuButton(
+            onPress: () {
               pages(3);
             },
+            menuText: t('b-s'),
           ),
-          ListTile(
-            title: Text(t('contact'), style: burgerMenuTextStyle),
-            onTap: () {
+          SizedBox(
+            width: 10.0,
+          ),
+          NavMenuButton(
+            onPress: () {
               pages(4);
             },
+            menuText: t('contact'),
+          ),
+          SizedBox(
+            width: 10.0,
           ),
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Padding(
               padding: const EdgeInsets.only(left: 10.0, top: 10),
               child: PopupMenuButton<int>(
-                icon:const Icon(
+                icon: const Icon(
                   Icons.g_translate,
                   size: 35,
                   color: textGreenColor,
@@ -81,9 +75,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String)
                     value: 1,
                     // row with 2 children
                     child: Row(
-                      children: <Widget>[
-                        Text("🇬🇧English")
-                      ],
+                      children: <Widget>[Text("🇬🇧English")],
                     ),
                   ),
                   // PopupMenuItem 2
@@ -91,9 +83,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String)
                     value: 2,
                     // row with two children
                     child: Row(
-                      children: [
-                        Text("🇯🇵日本語")
-                      ],
+                      children: [Text("🇯🇵日本語")],
                     ),
                   ),
                 ],
@@ -112,5 +102,7 @@ Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String)
             ),
           ]),
         ],
-      ));
+      ),
+    ],
+  );
 }

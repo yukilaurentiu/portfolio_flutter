@@ -14,4 +14,5 @@ const lavender = Color(0xffe8e0fa);
 const darkLavender = Color(0xff8c76ac);
 const textLavender = Color(0xff583f7d);
 
+const navMenuColor = Colors.teal;
 
