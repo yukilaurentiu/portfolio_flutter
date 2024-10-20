@@ -1,14 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/translation.dart';
-import 'package:portfolio_flutter/theme.dart';
+import 'package:portfolio_flutter/theme/theme.dart';
 
-Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String) updateLan) {
+import'package:portfolio_flutter/layouts/layout.dart';
+import '../theme/color.dart';
+import '../theme/desktop_theme.dart';
+import '../theme/mobile_theme.dart';
+import 'nav.dart';
+
+Widget burgerMenu(BuildContext context, PageController pageNav, Function(String) updateLan) {
   void pages(int page) {
     pageNav.jumpToPage(page);
     Navigator.pop(context);
   }
 
+  // if (layout == Layout.desktop) {
+  //   return navBar(context, pageNav, widget.updateLan);
+  // } else {
+  //   return burgerMenu(context, pageNav, widget.updateLan);
+  // }
   return Drawer(
       backgroundColor: lightGreen.withOpacity(0.9),
       child: ListView(
@@ -24,8 +35,6 @@ Drawer burgerMenu(BuildContext context, PageController pageNav, Function(String)
             ),
             onTap: () {
               pages(0);
-              // pageNav.jumpToPage(1);
-              // Navigator.pop(context);
             },
           ),
           ListTile(

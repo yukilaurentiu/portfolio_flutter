@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_flutter/components/down_btn.dart';
-import 'package:portfolio_flutter/components/en_translate.dart';
-import 'package:portfolio_flutter/theme.dart';
+import 'package:portfolio_flutter/theme/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
 
@@ -36,7 +35,7 @@ class _HomeState extends State<Home> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/background.png'),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
         child: Center(
@@ -69,7 +68,7 @@ class _HomeState extends State<Home> {
                         const SizedBox(height: 10),
                         Text(
                           t('home-t'),
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900, fontSize: 23,),
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w900,),
                         ),
                         const SizedBox(height: 10),
                         Padding(

@@ -1,18 +1,19 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/components/nav.dart';
+import 'package:portfolio_flutter/components/nav_mobile.dart';
 import 'package:portfolio_flutter/contact.dart';
-import 'package:portfolio_flutter/grow_gazzel_page.dart';
+import 'package:portfolio_flutter/grow_guzzle_page.dart';
 import 'package:portfolio_flutter/my_skills.dart';
+import 'package:portfolio_flutter/theme/color.dart';
 import 'package:portfolio_flutter/travel_map_page.dart';
-import 'package:portfolio_flutter/theme.dart';
-
+import 'package:portfolio_flutter/theme/theme.dart';
 import 'components/burgermenu.dart';
-import 'components/translation.dart';
 import 'home.dart';
 
 class Portfolio extends StatefulWidget {
   final void Function(String) updateLan;
-  const Portfolio({required this.updateLan, super.key});
+  final String layout;
+  const Portfolio({required this.updateLan, super.key, required this.layout});
 
   @override
   State<Portfolio> createState() => _PortfolioState();
@@ -26,55 +27,7 @@ class _PortfolioState extends State<Portfolio> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60.0),
-        child: AppBar(
-          title: Text(
-            'Yukiko Laurentiu',
-            style:
-                Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 21),
-          ),
-          backgroundColor: lightGreen,
-          iconTheme: const IconThemeData(size: 44, color: textGreenColor),
-          elevation: 0,
-          actions: [
-            PopupMenuButton<int>(
-              icon: Icon(
-                Icons.g_translate,
-                size: 25,
-                color: textGreenColor,
-              ),
-              color: lightPink,
-              itemBuilder: (context) => [
-                // PopupMenuItem 1
-                const PopupMenuItem(
-                  value: 1,
-                  // row with 2 children
-                  child: Row(
-                    children: <Widget>[Text("🇬🇧English")],
-                  ),
-                ),
-                // PopupMenuItem 2
-                const PopupMenuItem(
-                  value: 2,
-                  // row with two children
-                  child: Row(
-                    children: [Text("🇯🇵日本語")],
-                  ),
-                ),
-              ],
-              elevation: 2,
-              onSelected: (value) {
-                switch (value) {
-                  case 1:
-                    widget.updateLan('en');
-                    break;
-                  case 2:
-                    widget.updateLan('jp');
-                    break;
-                }
-              },
-            ),
-          ],
-        ),
+        child: widget.layout == 'mobile' ? NavMobile(updateLan: widget.updateLan) : navBar(context, pageNav, widget.updateLan)
       ),
       body: PageView(
         controller: pageNav,
@@ -87,7 +40,7 @@ class _PortfolioState extends State<Portfolio> {
           Contact(pageNav),
         ],
       ),
-      drawer: burgerMenu(context, pageNav, widget.updateLan),
+      drawer: widget.layout == "mobile" ? burgerMenu(context, pageNav, widget.updateLan) : null,
     );
   }
 }

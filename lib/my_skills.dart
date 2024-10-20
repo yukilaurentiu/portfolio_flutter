@@ -1,13 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/btnStyle.dart';
-import 'package:portfolio_flutter/components/paragraph.dart';
-import 'package:portfolio_flutter/theme.dart';
+import 'package:portfolio_flutter/theme/color.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:dev_icons/dev_icons.dart';
-import 'package:portfolio_flutter/components/tech_icon.dart';
-import 'components/down_btn.dart';
-import 'components/projects_card.dart';
 import 'components/skills_style.dart';
 import 'components/translation.dart';
 
@@ -53,7 +47,7 @@ class _MySkillsState extends State<MySkills> {
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),
-              skillStyle('Ruby on Rails', context),
+              skillStyle('Ruby', context),
               skillStyle('Dart', context),
               skillStyle('JavaScript(ES6)', context),
               const SizedBox(height: 15),
@@ -64,6 +58,7 @@ class _MySkillsState extends State<MySkills> {
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
                 ),
               ),
+              skillStyle('Ruby on Rails', context),
               skillStyle('Flutter', context),
               const SizedBox(height: 15),
               Padding(

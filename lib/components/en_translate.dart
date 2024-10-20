@@ -18,7 +18,7 @@ const Map<String, String> enTranslate = {
           ' combined with a build-your-own garden game to encourage continued usage of the app.',
   'skill': 'My Skills',
   'skill1': 'Language',
-  'skill2': 'framework',
+  'skill2': 'Framework',
   'skill3': 'Markup Language',
   'skill4': 'Tools',
   'skill5': 'Operating Systems',
