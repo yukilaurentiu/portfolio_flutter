@@ -2,22 +2,24 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
 import 'package:portfolio_flutter/theme/color.dart';
+import 'package:portfolio_flutter/theme/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dev_icons/dev_icons.dart';
 import 'package:portfolio_flutter/components/tech_icon.dart';
 import 'components/btnStyle.dart';
+import 'components/down_btn.dart';
 import 'components/projects_card.dart';
 import 'translate/translation.dart';
 
-class TravelMapPage extends StatefulWidget {
-  const TravelMapPage(this.pageNav, {super.key});
+class EuRamenPage extends StatefulWidget {
+  const EuRamenPage(this.pageNav, {super.key});
   final PageController pageNav;
 
   @override
-  State<TravelMapPage> createState() => _TravelMapPageState();
+  State<EuRamenPage> createState() => _EuRamenPageState();
 }
 
-class _TravelMapPageState extends State<TravelMapPage> {
+class _EuRamenPageState extends State<EuRamenPage> {
   void _launchUrl(Uri url) async {
     if (!await launchUrl(url)) {
       await launchUrl(url);
@@ -39,29 +41,29 @@ class _TravelMapPageState extends State<TravelMapPage> {
               Padding(
                 padding: const EdgeInsets.only(top:20.0, bottom: 10),
                 child: Text(
-                  '',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textPinkColor),
+                  t('project'),
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textLavender),
                 ),
               ),
               const SizedBox(height: 30),
               ProjectsCard(
                 onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])),
-                image: const AssetImage('images/travelmap-logo.png'),
-                title: 'Travel Map',
-                paragraph: t('travel-p'),
-                titleColor: textPinkColor,
-                pColor: darkPink,
+                image: const AssetImage('images/lecamarade-logo.png'),
+                title: "EU Ramen",
+                paragraph: t('eu-p'),
+                titleColor: textLavender,
+                pColor: darkLavender,
               ),
               Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      techIconStyle(Icon(DevIcons.rubyPlainWordmark), yellow),
-                      techIconStyle(Icon(DevIcons.railsPlainWordmark), green),
                       techIconStyle(Icon(DevIcons.javascriptPlain), yellow),
                       techIconStyle(Icon(DevIcons.html5PlainWordmark), green),
-                      techIconStyle(Icon(DevIcons.css3PlainWordmark), yellow),
+                      techIconStyle(Icon(DevIcons.reactOriginal), yellow),
+                      techIconStyle(Icon(DevIcons.css3PlainWordmark), green),
+                      techIconStyle(Icon(DevIcons.githubOriginal), yellow),
                     ],
                   ),
                   // Row(

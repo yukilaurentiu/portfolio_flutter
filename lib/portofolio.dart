@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/nav.dart';
 import 'package:portfolio_flutter/components/nav_mobile.dart';
 import 'package:portfolio_flutter/contact.dart';
+import 'package:portfolio_flutter/eu_ramen_page.dart';
 import 'package:portfolio_flutter/grow_guzzle_page.dart';
 import 'package:portfolio_flutter/my_skills.dart';
 import 'package:portfolio_flutter/travel_map_page.dart';
@@ -32,6 +33,7 @@ class _PortfolioState extends State<Portfolio> {
         scrollDirection: Axis.vertical,
         children: [
           Home(pageNav),
+          EuRamenPage(pageNav),
           TravelMapPage(pageNav),
           GrowGuzzlePage(pageNav),
           MySkills(pageNav),
