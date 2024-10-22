@@ -1,5 +1,5 @@
-import 'package:portfolio_flutter/components/en_translate.dart';
-import 'package:portfolio_flutter/components/jp_translate.dart';
+import 'package:portfolio_flutter/translate/en_translate.dart';
+import 'package:portfolio_flutter/translate/jp_translate.dart';
 
 class L {
   static String lan = 'en';

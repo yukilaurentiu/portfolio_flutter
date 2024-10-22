@@ -5,7 +5,7 @@ import 'package:portfolio_flutter/theme/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
 
-import 'components/translation.dart';
+import 'translate/translation.dart';
 
 
 

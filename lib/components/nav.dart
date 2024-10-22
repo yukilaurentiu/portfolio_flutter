@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/components/translation.dart';
+import 'package:portfolio_flutter/translate/translation.dart';
 import '../theme/color.dart';
 import 'nav_menubutton.dart';
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/portofolio.dart';
 import 'package:portfolio_flutter/theme/desktop_theme.dart';
 import 'package:portfolio_flutter/theme/mobile_theme.dart';
-import 'components/translation.dart';
+import 'translate/translation.dart';
 
 import 'layouts/layout.dart';
 import 'layouts/responsive_layout.dart';

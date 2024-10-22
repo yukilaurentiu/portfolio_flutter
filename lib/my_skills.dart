@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/theme/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'components/skills_style.dart';
-import 'components/translation.dart';
+import 'translate/translation.dart';
 
 class MySkills extends StatefulWidget {
   const MySkills(this.pageNav, {super.key});

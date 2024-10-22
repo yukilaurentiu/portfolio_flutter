@@ -1,19 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:portfolio_flutter/components/btnStyle.dart';
-import 'package:portfolio_flutter/components/paragraph.dart';
 import 'package:portfolio_flutter/theme/color.dart';
-import 'package:portfolio_flutter/theme/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:dev_icons/dev_icons.dart';
-import 'package:portfolio_flutter/components/tech_icon.dart';
-import 'components/down_btn.dart';
-import 'components/projects_card.dart';
-import 'components/skills_style.dart';
-import 'components/translation.dart';
+import 'translate/translation.dart';
 
 class Contact extends StatefulWidget {
   const Contact(this.pageNav, {super.key});
@@ -40,7 +32,7 @@ class _ContactState extends State<Contact> {
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: Container(
               color: lavender,
               child: Column(
@@ -52,10 +44,10 @@ class _ContactState extends State<Contact> {
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textLavender),
                     ),
                   ),
-                  const SizedBox(height: 80),
+                  const SizedBox(height: 50),
                   const Icon(
                     Icons.mail,
-                    size: 40,
+                    size: 35,
                     color: darkLavender,
                   ),
                   Padding(
@@ -74,13 +66,39 @@ class _ContactState extends State<Contact> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 80),
+                  const SizedBox(height: 20),
                   BtnStyle(
                     onPress: () => _launchUrl(Uri.parse(
-                        'https://github.com/yukilaurentiu/my_cv/blob/main/YukikoLaurentiuCV.pdf')),
+                        'https://yukilaurentiu.github.io/#/contact')),
                     btnColor: textLavender,
-                    text: t('contact-btn'),
-                    size: Size(220, 50),
+                    text: t('contact-bt1'),
+                    size: Size(150, 50),
+                  ),
+                  const SizedBox(height: 50),
+                  Text(
+                    t('contact-bt2'),
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(color: textLavender),
+                  ),
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: BtnStyle(
+                      onPress: () => _launchUrl(Uri.parse(
+                          'https://yukilaurentiu.github.io/docs/YukikoLaurentiu-cv.pdf')),
+                      btnColor: textLavender,
+                      text: '🇬🇧English',
+                      size: Size(150, 50),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: BtnStyle(
+                      onPress: () => _launchUrl(Uri.parse(
+                          'https://yukilaurentiu.github.io/docs/ラウレンチウ有希子履歴書.pdf')),
+                      btnColor: textLavender,
+                      text: '🇯🇵日本語',
+                      size: Size(150, 50),
+                    ),
                   ),
                 ],
               ),
@@ -91,7 +109,7 @@ class _ContactState extends State<Contact> {
             child: Container(
               color: textGreenColor,
               child: Padding(
-                padding: const EdgeInsets.all(70.0),
+                padding: const EdgeInsets.all(40.0),
                 child: Center(
                   child: Column(
                     children: [

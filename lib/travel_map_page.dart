@@ -9,7 +9,7 @@ import 'package:portfolio_flutter/components/tech_icon.dart';
 import 'components/btnStyle.dart';
 import 'components/down_btn.dart';
 import 'components/projects_card.dart';
-import 'components/translation.dart';
+import 'translate/translation.dart';
 
 class TravelMapPage extends StatefulWidget {
   const TravelMapPage(this.pageNav, {super.key});

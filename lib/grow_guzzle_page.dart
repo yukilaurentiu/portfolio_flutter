@@ -9,7 +9,7 @@ import 'package:dev_icons/dev_icons.dart';
 import 'package:portfolio_flutter/components/tech_icon.dart';
 import 'components/down_btn.dart';
 import 'components/projects_card.dart';
-import 'components/translation.dart';
+import 'translate/translation.dart';
 
 class GrowGuzzlePage extends StatefulWidget {
   const GrowGuzzlePage(this.pageNav, {super.key});
