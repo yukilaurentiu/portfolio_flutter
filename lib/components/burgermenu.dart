@@ -1,13 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/translate/translation.dart';
-import 'package:portfolio_flutter/theme/theme.dart';
-
-import'package:portfolio_flutter/layouts/layout.dart';
 import '../theme/color.dart';
 import '../theme/desktop_theme.dart';
 import '../theme/mobile_theme.dart';
-import 'nav.dart';
+
 
 Widget burgerMenu(BuildContext context, PageController pageNav, Function(String) updateLan) {
   void pages(int page) {
@@ -66,7 +63,7 @@ Widget burgerMenu(BuildContext context, PageController pageNav, Function(String)
             },
           ),
           ListTile(
-            title: Text(t('contact'), style: burgerMenuTextStyle),
+            title: Text(t('contact-bt1'), style: burgerMenuTextStyle),
             onTap: () {
               pages(4);
             },
