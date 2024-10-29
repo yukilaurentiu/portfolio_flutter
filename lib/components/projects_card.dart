@@ -24,18 +24,21 @@ class ProjectsCard extends StatelessWidget {
     return Column(
       children: [
         Center(
-            child: Container(
-          width: 80,
-          height: 80,
-          decoration: BoxDecoration(
-            borderRadius:
-                BorderRadius.circular(10.0), // Adjust the radius as needed
-            image: DecorationImage(
-              image: image,
-              fit: BoxFit.cover, // Adjust the fit based on your needs
-            ),
-          ),
-        )),
+            child: GestureDetector(
+              onTap: onPress,
+              child: Container(
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+              borderRadius:
+                  BorderRadius.circular(10.0), // Adjust the radius as needed
+              image: DecorationImage(
+                image: image,
+                fit: BoxFit.cover, // Adjust the fit based on your needs
+              ),
+                        ),
+                      ),
+            )),
         SizedBox(height:10),
         Padding(
           padding: const EdgeInsets.all(30.0),

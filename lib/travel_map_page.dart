@@ -37,10 +37,9 @@ class _TravelMapPageState extends State<TravelMapPage> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top:20.0, bottom: 10),
+                padding: const EdgeInsets.only(top:15.0),
                 child: Text(
                   '',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textPinkColor),
                 ),
               ),
               const SizedBox(height: 30),

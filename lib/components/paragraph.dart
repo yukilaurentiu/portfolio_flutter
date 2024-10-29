@@ -6,7 +6,7 @@ const travelMap =
 const List urls = [
   {
     'travel': 'https://github.com/yukilaurentiu/travelmap',
-
+    'euramen': 'https://www.euramen.com/',
   },
   {
     'y-l': 'https://www.linkedin.com/in/yukikolaurentiu/',
