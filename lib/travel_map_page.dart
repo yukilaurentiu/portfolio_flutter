@@ -30,7 +30,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightPink,
+      backgroundColor: lavender,
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Center(
@@ -48,8 +48,8 @@ class _TravelMapPageState extends State<TravelMapPage> {
                 image: const AssetImage('images/travelmap-logo.png'),
                 title: 'Travel Map',
                 paragraph: t('travel-p'),
-                titleColor: textPinkColor,
-                pColor: darkPink,
+                titleColor: textLavender,
+                pColor: darkLavender,
               ),
               Column(
                 children: [
@@ -71,7 +71,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
                   //   ],
                   // ),
                   SizedBox(height: 50),
-                  BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink,text: t('project-bnt')),
+                  BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender,text: t('project-bnt')),
                   SizedBox(height: 20),
                 ],
               ),

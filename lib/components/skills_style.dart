@@ -5,7 +5,7 @@ import 'package:portfolio_flutter/theme/theme.dart';
 import '../theme/color.dart';
 
 const skillText = TextStyle(
-  color: textLight,
+  color: white,
   fontWeight: FontWeight.w500,
 );
 

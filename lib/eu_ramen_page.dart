@@ -42,7 +42,7 @@ class _EuRamenPageState extends State<EuRamenPage> {
                 padding: const EdgeInsets.only(top:20.0, bottom: 10),
                 child: Text(
                   t('project'),
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textLavender),
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(color: textPinkColor),
                 ),
               ),
               const SizedBox(height: 30),
@@ -51,8 +51,8 @@ class _EuRamenPageState extends State<EuRamenPage> {
                 image: const AssetImage('images/ramen_logo.png'),
                 title: "EU Ramen",
                 paragraph: t('eu-p'),
-                titleColor: textLavender,
-                pColor: darkLavender,
+                titleColor: textPinkColor,
+                pColor: darkPink,
               ),
               Column(
                 children: [

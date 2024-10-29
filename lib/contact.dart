@@ -28,13 +28,13 @@ class _ContactState extends State<Contact> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lavender,
+      backgroundColor: white,
       body: Column(
         children: [
           Expanded(
             flex: 3,
             child: Container(
-              color: lavender,
+              color: white,
               child: Column(
                 children: [
                   Padding(
@@ -120,7 +120,7 @@ class _ContactState extends State<Contact> {
                               text: "©",
                               style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                     fontWeight: FontWeight.w200,
-                                    color: textLight,
+                                    color: white,
                                   ),
                             ),
                             TextSpan(
@@ -130,7 +130,7 @@ class _ContactState extends State<Contact> {
                                   .titleSmall
                                   ?.copyWith(
                                     fontWeight: FontWeight.w700,
-                                    color: textLight,
+                                    color: white,
                                   ),
                             ),
                           ],
@@ -139,7 +139,7 @@ class _ContactState extends State<Contact> {
                       Text(
                         'All Rights reserved.',
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                              color: textLight,
+                              color: white,
                             ),
                       ),
                       const SizedBox(height: 15),
@@ -154,14 +154,14 @@ class _ContactState extends State<Contact> {
                               text: "Design by ",
                               style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                     fontWeight: FontWeight.w200,
-                                    color: textLight,
+                                    color: white,
                                   ),
                             ),
                             TextSpan(
                               text: "Lisa Brune",
                               style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                     fontWeight: FontWeight.w700,
-                                    color: textLight,
+                                    color: white,
                                   ),
                             ),
                           ],
