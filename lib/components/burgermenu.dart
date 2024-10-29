@@ -57,6 +57,17 @@ Widget burgerMenu(BuildContext context, PageController pageNav, Function(String)
             },
           ),
           ListTile(
+            title: Text(
+              t('b-p3'),
+              style: burgerMenuTextStyle,
+            ),
+            onTap: () {
+              pages(1);
+              // pageNav.jumpToPage(1);
+              // Navigator.pop(context);
+            },
+          ),
+          ListTile(
             title: Text(t('b-s'), style: burgerMenuTextStyle),
             onTap: () {
               pages(3);

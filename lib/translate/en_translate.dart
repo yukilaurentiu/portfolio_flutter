@@ -8,6 +8,9 @@ const Map<String, String> enTranslate = {
   'home-p3':
       " is who eager to dive into real-world projects and grow through hands-on experience within a team environment",
   'project': 'My Projects',
+  'eu-p': 'As my first freelance project, I spent 3 months developing the EU Ramen website. '
+         'I designed a fully responsive site, integrated multilingual features, and enhanced user experience. '
+         'Additionally, I contributed significantly to content translation, helping the client reach a broader audience.',
   'travel-p':
       'This is a final project from Le Wagon Bootcamp, using Ruby on Rails with MVC-pattern, '
           'application authentication, authorization for security, Calendar method, Chat function, '
@@ -28,5 +31,6 @@ const Map<String, String> enTranslate = {
   'contact-bt2': 'Download CV',
   'b-p1': 'project 1',
   'b-p2': 'project 2',
+  'b-p3': 'project 3',
   'b-s': 'my skills',
 };

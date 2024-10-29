@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/components/btnStyle.dart';
 import 'package:portfolio_flutter/components/paragraph.dart';
 import 'package:portfolio_flutter/theme/color.dart';
-import 'package:portfolio_flutter/theme/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dev_icons/dev_icons.dart';
 import 'package:portfolio_flutter/components/tech_icon.dart';
@@ -32,7 +31,7 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lavender,
+      backgroundColor: lightPink,
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Center(
@@ -50,8 +49,8 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
                 image: const AssetImage('images/lecamarade-logo.png'),
                 title: "Grow Guzzle",
                 paragraph: t('grow-p'),
-                titleColor: textLavender,
-                pColor: darkLavender,
+                titleColor: textPinkColor,
+                pColor: darkPink,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -66,7 +65,7 @@ class _GrowGuzzlePageState extends State<GrowGuzzlePage> {
                       ],
                     ),
                     SizedBox(height: 50),
-                    BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkLavender, text: t('project-bnt'),),
+                    BtnStyle(onPress: () => _launchUrl(Uri.parse(urls[0]['travel'])), btnColor: darkPink, text: t('project-bnt'),),
                     SizedBox(height: 30),
                     // downBtn(backgroundColor: darkGreen,textColor: Colors.white, onPressed: ()=> widget.pageNav.jumpToPage(3)),
                   ],

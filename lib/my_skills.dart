@@ -36,7 +36,7 @@ class _MySkillsState extends State<MySkills> {
                 padding: const EdgeInsets.only(top: 15.0),
                 child: Text(
                   t('skill'),
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white),
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Color(0xFFF8FDFB)),
                 ),
               ),
               const SizedBox(height: 30),
